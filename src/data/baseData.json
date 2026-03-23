@@ -1,0 +1,860 @@
+{
+  "meta": {
+    "title": "Calculadora VUC 2026",
+    "description": "Recalcula el valor unitario habitacional con matriz editable y tabla VUC configurable."
+  },
+  "surfaceRanges": [
+    {
+      "key": "S01",
+      "label": "de 1 hasta 50 m2",
+      "min": 1,
+      "max": 50,
+      "defaultSurface": 25.5
+    },
+    {
+      "key": "S02",
+      "label": "Mayor de 50 hasta 85 m2",
+      "min": 50,
+      "max": 85,
+      "defaultSurface": 67.5
+    },
+    {
+      "key": "S03",
+      "label": "Mayor de 85 hasta 150 m2",
+      "min": 85,
+      "max": 150,
+      "defaultSurface": 117.5
+    },
+    {
+      "key": "S04",
+      "label": "Mayor de 150 hasta 250 m2",
+      "min": 150,
+      "max": 250,
+      "defaultSurface": 200
+    },
+    {
+      "key": "S05",
+      "label": "Mayor de 250 hasta 450 m2",
+      "min": 250,
+      "max": 450,
+      "defaultSurface": 350
+    },
+    {
+      "key": "S06",
+      "label": "Mayor de 450 hasta 650 m2",
+      "min": 450,
+      "max": 650,
+      "defaultSurface": 550
+    },
+    {
+      "key": "S07",
+      "label": "Mayor de 650 m2",
+      "min": 650.01,
+      "max": 999999,
+      "defaultSurface": 675
+    }
+  ],
+  "classRanges": [
+    {
+      "key": "1",
+      "min": 0,
+      "max": 38
+    },
+    {
+      "key": "2",
+      "min": 39,
+      "max": 60
+    },
+    {
+      "key": "3",
+      "min": 61,
+      "max": 85
+    },
+    {
+      "key": "4",
+      "min": 86,
+      "max": 115
+    },
+    {
+      "key": "5",
+      "min": 116,
+      "max": 145
+    },
+    {
+      "key": "6",
+      "min": 146,
+      "max": 180
+    },
+    {
+      "key": "7",
+      "min": 181,
+      "max": 999999
+    }
+  ],
+  "matrixSections": [
+    {
+      "key": "ESPACIOS",
+      "label": "ESPACIOS",
+      "items": [
+        {
+          "id": "R001",
+          "name": "DESCRIPCION DE ESPACIOS",
+          "options": []
+        },
+        {
+          "id": "R002",
+          "name": "SUPERFICIE DE CONSTRUCCIÓN",
+          "options": [
+            {
+              "id": "O01",
+              "label": "de 1 hasta 50 m2",
+              "score": 1
+            },
+            {
+              "id": "O02",
+              "label": "Mayor de 50 hasta 85 m2",
+              "score": 1
+            },
+            {
+              "id": "O03",
+              "label": "Mayor de 85 hasta 150 m2",
+              "score": 1
+            },
+            {
+              "id": "O04",
+              "label": "Mayor de 150 hasta 250 m2",
+              "score": 2
+            },
+            {
+              "id": "O05",
+              "label": "Mayor de 250 hasta 450 m2",
+              "score": 3
+            },
+            {
+              "id": "O06",
+              "label": "Mayor de 450 hasta 650 m2",
+              "score": 3
+            },
+            {
+              "id": "O07",
+              "label": "Mayor de 650 m2",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ESTRUCTURA",
+      "label": "ESTRUCTURA",
+      "items": [
+        {
+          "id": "R003",
+          "name": "TIPO DE ESTRUCTURA",
+          "options": [
+            {
+              "id": "O01",
+              "label": "Muros de carga sin refuerzo horizontales y/o verticales para vivienda 1 y hasta 50 m2 de construcción",
+              "score": 7
+            },
+            {
+              "id": "O02",
+              "label": "Muros de carga para vivienda mayor de 50 y hasta 85 m2 de construcción",
+              "score": 8
+            },
+            {
+              "id": "O03",
+              "label": "Muros de carga para vivienda mayor de 85 y hasta 150 m2 de construcción",
+              "score": 8
+            },
+            {
+              "id": "O04",
+              "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 150 y hasta 250 m2 de construcción",
+              "score": 8
+            },
+            {
+              "id": "O05",
+              "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 250 y hasta 450 m2 de construcción",
+              "score": 9
+            },
+            {
+              "id": "O06",
+              "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 450 y hasta 650 m2 de construcción",
+              "score": 9
+            },
+            {
+              "id": "O07",
+              "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 650 m2 de construcción",
+              "score": 11
+            }
+          ]
+        },
+        {
+          "id": "R004",
+          "name": "MUROS",
+          "options": [
+            {
+              "id": "O01",
+              "label": "Lámina y/o madera y/o tabicón",
+              "score": 8
+            },
+            {
+              "id": "O02",
+              "label": "Tabicón y/o block y/o tabique y/o sillar de adobe, para vivienda mayor de 50 y hasta 85 m2 de construcción",
+              "score": 11
+            },
+            {
+              "id": "O03",
+              "label": "Block y/o tabique y/o sillar de adobe, para vivienda mayor de 85 y hasta 150 m2 de construcción",
+              "score": 18
+            },
+            {
+              "id": "O04",
+              "label": "Block y/o tabique y/o sillar de adobe, para vivienda mayor de 150 y hasta 250 m2 de construcción",
+              "score": 19
+            },
+            {
+              "id": "O05",
+              "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda mayor de 250 y hasta 450 m2 de construcción",
+              "score": 20
+            },
+            {
+              "id": "O06",
+              "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda mayor de 450 y hasta 650 m2 de construcción",
+              "score": 21
+            },
+            {
+              "id": "O07",
+              "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda de más de 650 m2 de construcción",
+              "score": 22
+            }
+          ]
+        },
+        {
+          "id": "R005",
+          "name": "ENTREPISOS",
+          "options": [
+            {
+              "id": "O01",
+              "label": "Sin entrepisos",
+              "score": 1
+            },
+            {
+              "id": "O02",
+              "label": "Con o sin losa de concreto y/o losa aligerada y/o de madera, para vivienda mayor de 50 y hasta 85 m2 de construcción",
+              "score": 4
+            },
+            {
+              "id": "O03",
+              "label": "Con o sin losa de concreto y/o losa aligerada y/o de madera para vivienda mayor de 85 y hasta 150 m2 de construcción",
+              "score": 5
+            },
+            {
+              "id": "O04",
+              "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 150 y hasta 250 m2 de construcción",
+              "score": 7
+            },
+            {
+              "id": "O05",
+              "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 250 y hasta 450 m2 de construcción",
+              "score": 8
+            },
+            {
+              "id": "O06",
+              "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 450 y hasta 650 m2 de construcción",
+              "score": 9
+            },
+            {
+              "id": "O07",
+              "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 650 m2 de construcción",
+              "score": 10
+            }
+          ]
+        },
+        {
+          "id": "R006",
+          "name": "CUBIERTAS",
+          "options": [
+            {
+              "id": "O01",
+              "label": "Lámina de cartón asfáltico, asbesto o fibra de vidrio",
+              "score": 4
+            },
+            {
+              "id": "O02",
+              "label": "Losa de concreto y/o losa aligerada, para vivienda mayor de 50 y hasta 85 m2 de construcción",
+              "score": 5
+            },
+            {
+              "id": "O03",
+              "label": "Losa de concreto y/o losa aligerada, para vivienda mayor de 85 y hasta 150 m2 de construcción",
+              "score": 6
+            },
+            {
+              "id": "O04",
+              "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 150 y hasta 250 m2 de construcción",
+              "score": 9
+            },
+            {
+              "id": "O05",
+              "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 250 y hasta 450 m2 de construcción",
+              "score": 13
+            },
+            {
+              "id": "O06",
+              "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 450 y hasta 650 m2 de construcción",
+              "score": 14
+            },
+            {
+              "id": "O07",
+              "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 650 m2 de construcción",
+              "score": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ACABADOS",
+      "label": "ACABADOS",
+      "items": [
+        {
+          "id": "R007",
+          "name": "ACABADOS EN MUROS Y PLAFONES",
+          "options": [
+            {
+              "id": "O01",
+              "label": "No hay o muy escasos",
+              "score": 0
+            },
+            {
+              "id": "O02",
+              "label": "Tabique y/o block aparente. Plafón: Aparente común",
+              "score": 4
+            },
+            {
+              "id": "O03",
+              "label": "Anterior(es) y/o aplanado de yeso con pintura y/o aplanado de mezcla con pintura. Plafón: Aplanado de mezcla, cartón de yeso y/o pasta y/o tirol con pintura",
+              "score": 5
+            },
+            {
+              "id": "O04",
+              "label": "Anterior(es) y/o pasta texturizada y/o papel tapiz. Plafón: corrido y/o plafón suspendido y/o modular de tablaroca y/o PVC",
+              "score": 6
+            },
+            {
+              "id": "O05",
+              "label": "Anterior(es) y/o pasta texturizada con color integral y/o papel tapiz plastificado. Plafón: Anterior(es) y/o marquesinas y/o nubes de tablaroca y/o madera y/o fibra de vidrio.",
+              "score": 8
+            },
+            {
+              "id": "O06",
+              "label": "Anterior(es) y/o papel tapiz de tela y/o cenefas de madera. Plafón: con sistemas personalizados y/o iluminación integrada en tablaroca, cartón de yeso y/o fibra de vidrio",
+              "score": 9
+            },
+            {
+              "id": "O07",
+              "label": "Anterior(es), y/o pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos. Plafón: Anterior(es) y/o elementos geométricos curvos en materiales como metal y/o maderas finas",
+              "score": 12
+            }
+          ]
+        },
+        {
+          "id": "R008",
+          "name": "ACABADOS EN PISO",
+          "options": [
+            {
+              "id": "O01",
+              "label": "Piso de tierra y/o firme de mezcla",
+              "score": 0
+            },
+            {
+              "id": "O02",
+              "label": "Firme de concreto simple pulido y/o loseta vinílica y/o linóleum y/o alfombra",
+              "score": 2
+            },
+            {
+              "id": "O03",
+              "label": "Anterior(es) y/o mosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm.",
+              "score": 4
+            },
+            {
+              "id": "O04",
+              "label": "Anterior(es) y/o mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado",
+              "score": 5
+            },
+            {
+              "id": "O05",
+              "label": "Anterior(es) y/o alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería",
+              "score": 6
+            },
+            {
+              "id": "O06",
+              "label": "Anterior(es) y/o alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada",
+              "score": 7
+            },
+            {
+              "id": "O07",
+              "label": "Anterior(es) alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm.",
+              "score": 10
+            }
+          ]
+        },
+        {
+          "id": "R009",
+          "name": "ACABADOS EN FACHADAS",
+          "options": [
+            {
+              "id": "O01",
+              "label": "Sin acabados",
+              "score": 0
+            },
+            {
+              "id": "O02",
+              "label": "Material aparente común",
+              "score": 3
+            },
+            {
+              "id": "O03",
+              "label": "Aplanado de mezcla y/o pasta con pintura.",
+              "score": 4
+            },
+            {
+              "id": "O04",
+              "label": "Tabique, block, madera y/o concreto, acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas.",
+              "score": 5
+            },
+            {
+              "id": "O05",
+              "label": "Aplanado de mezcla y/o pasta y/o placa de cantera y/o mármoles y/o losas inclinadas y/o piedrín y/o precolados de concreto, balcones y/o terrazas descubiertas",
+              "score": 7
+            },
+            {
+              "id": "O06",
+              "label": "Anterior(es) y/o láminas de aluminio esmaltado y/o fachada integral de cristal y/o balcones y/o terrazas cubiertas",
+              "score": 13
+            },
+            {
+              "id": "O07",
+              "label": "Materiales de nueva generación (muros verdes, paneles de acero, aluminio)",
+              "score": 23
+            }
+          ]
+        },
+        {
+          "id": "R010",
+          "name": "VENTANERÍA",
+          "options": [
+            {
+              "id": "O01",
+              "label": "De pedacería de madera de pino de segunda y/o fierro de segunda",
+              "score": 1
+            },
+            {
+              "id": "O02",
+              "label": "Perfil de aluminio natural de 1\" y/o perfil de fierro estructural y/o tubular de pared delgada",
+              "score": 2
+            },
+            {
+              "id": "O03",
+              "label": "Perfil de aluminio natural de hasta 2\" y/o perfil de fierro estructural y/o tubular de pared gruesa",
+              "score": 4
+            },
+            {
+              "id": "O04",
+              "label": "Perfil de aluminio anodizado o esmaltado hasta de 3\" con canceles de piso a techo y cristal hasta de 6 mm",
+              "score": 5
+            },
+            {
+              "id": "O05",
+              "label": "Perfil de aluminio anodizado o esmaltado de hasta 4\" con canceles de piso a techo y cristal de hasta 9 mm",
+              "score": 10
+            },
+            {
+              "id": "O06",
+              "label": "Anterior(es) y/o cristal templado filtrasol y/o polarizado y/o cancelería de PVC de doble cristal térmico y acústico",
+              "score": 13
+            },
+            {
+              "id": "O07",
+              "label": "Anterior(es) y/o inteligente laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato",
+              "score": 16
+            }
+          ]
+        },
+        {
+          "id": "R011",
+          "name": "RECUBRIMIENTOS EN BAÑOS Y COCINA",
+          "options": [
+            {
+              "id": "O01",
+              "label": "Sin recubrimientos",
+              "score": 0
+            },
+            {
+              "id": "O02",
+              "label": "Mosaicos 20 x 20 cm. y/o azulejo de 11 x 11 cm. y/o loseta cerámica de hasta 20 x 20 cm. y/o esmalte",
+              "score": 2
+            },
+            {
+              "id": "O03",
+              "label": "Anterior(es) y/o loseta cerámica de hasta 30 x 30 cm. y/o de mármol de 10 x 30 cm",
+              "score": 3
+            },
+            {
+              "id": "O04",
+              "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm.",
+              "score": 9
+            },
+            {
+              "id": "O05",
+              "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm.",
+              "score": 12
+            },
+            {
+              "id": "O06",
+              "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cm",
+              "score": 16
+            },
+            {
+              "id": "O07",
+              "label": "Anterior(es) y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm",
+              "score": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SERVICIOS",
+      "label": "SERVICIOS",
+      "items": [
+        {
+          "id": "R012",
+          "name": "MUEBLES DE BAÑO CALIDAD",
+          "options": [
+            {
+              "id": "O01",
+              "label": "W.C. de barro y/o letrina sin conexión de agua corriente.",
+              "score": 5
+            },
+            {
+              "id": "O02",
+              "label": "Muebles tipo \"A\" Económica",
+              "score": 8
+            },
+            {
+              "id": "O03",
+              "label": "Muebles tipo \"B\" Mediana Calidad",
+              "score": 12
+            },
+            {
+              "id": "O04",
+              "label": "Muebles tipo \"C\" Buena Calidad",
+              "score": 25
+            },
+            {
+              "id": "O05",
+              "label": "Muebles tipo \"D\" Lujo",
+              "score": 34
+            },
+            {
+              "id": "O06",
+              "label": "Muebles tipo \"E\" Super Lujo",
+              "score": 46
+            },
+            {
+              "id": "O07",
+              "label": "Muebles tipo \"F\" Gran Lujo",
+              "score": 56
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "vucTable": {
+    "10": {
+      "2": 3602.62,
+      "3": 5392.17,
+      "4": 9849.52,
+      "5": 12041.72,
+      "6": 18763.95,
+      "7": 21631.11
+    },
+    "15": {
+      "3": 5721.84,
+      "4": 10442.91,
+      "5": 14116.19,
+      "6": 21184.19,
+      "7": 23741.97
+    },
+    "20": {
+      "3": 6487.09,
+      "4": 11846.28,
+      "5": 16004.62,
+      "6": 24314.05,
+      "7": 28033.01
+    },
+    "99": {
+      "3": 6597.74,
+      "4": 12044.11,
+      "5": 16273.04,
+      "6": 28663.81,
+      "7": 32467.99
+    },
+    "02": {
+      "1": 1973.22,
+      "2": 3006.92,
+      "3": 4869.43,
+      "4": 6560.08,
+      "5": 10859.69,
+      "6": 15418.91,
+      "7": 17672.9
+    },
+    "05": {
+      "2": 3202.3,
+      "3": 5380.39,
+      "4": 8059.99,
+      "5": 10890.3,
+      "6": 17713.03,
+      "7": 20574.73
+    }
+  },
+  "scenariosBySurfaceRange": {
+    "S01": [
+      {
+        "id": "SC001",
+        "description": "Sin techo de losa de concreto  o aligerada, sin acabados en muros y pisosy fachada,  wc sin conexión a agua corriente",
+        "score": 27
+      },
+      {
+        "id": "SC002",
+        "description": "Sin techo de losa de concreto  o aligerada, con acabadosde concreto en pisos, muros y fachadas, wc económico",
+        "score": 40
+      }
+    ],
+    "S02": [
+      {
+        "id": "SC003",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, sin entrepisos, con losa de concreto, sin acabados en muros, piso firme de concreto, acabados de material aparente, ventaneria de pared delgada, sin recubrimiento en baños y muebles tipo A",
+        "score": 41
+      },
+      {
+        "id": "SC004",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros tabique o block aparente, piso firme de concreto, acabados de fachadas material aparente, ventaneria de pared delgada 1'', con mosaicos 20x20 en baños y muebles tipo A",
+        "score": 50
+      },
+      {
+        "id": "SC005",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros aplanado yeso o concreto con pintura, piso cmosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm, acabados de fachadas aplanado de mezcla y/o pasta con pintura, ventaneria de pared gruesa 2'', con mosaicos de ceramica de hasta 30x30 cm y marmol de 10x30 cm en baños y muebles tipo B Mediana Calidad",
+        "score": 61
+      },
+      {
+        "id": "SC006",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz, piso mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado, acabados de fachadas tabique,block, madera y/o concreto acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas,  ventaneria de perfil aluminio anonizado de hasta 3'', canceles de piso a techo y cristal de hasta 6 mm,  con loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm en baños y muebles tipo C Buena Calidad",
+        "score": 84
+      },
+      {
+        "id": "SC007",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz plastificado, \n piso alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería, \n acabados de fachadas mezcla, pasta y/o placa de cantera, balcones y/o terrazas descubiertas, \n ventaneria de perfil aluminio anonizado de hasta 4'', canceles de piso a techo y cristal de hasta 9mm, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm en baños y \n muebles de baño tipo D Lujo",
+        "score": 106
+      },
+      {
+        "id": "SC008",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros papel tapiz de tela y/o cenefas de madera,\n piso alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada, \n acabados de fachadas laminas de aluminio esmaltado, fachada inegral de cristal, balcones y/o terrazas cubiertas, \n ventaneria cristal templado, filtrasol, polarizado, PVC de doble cristal termico y acustico, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cmen baños y \n muebles de baño tipo E Super lujo",
+        "score": 133
+      },
+      {
+        "id": "SC009",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos,\n piso alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm, \n acabados de fachadas de materiales de nueva generación (muros verdes, paneles de acero, aluminio), \n ventaneria laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato,\n con loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm en baños y \n muebles de baño tipo F Gran Lujo",
+        "score": 166
+      }
+    ],
+    "S03": [
+      {
+        "id": "SC010",
+        "description": "Estructura con muros de carga, hechos de tabicn o block, sin entrepisos, con losa de concreto, \nacabados en muros de tabique y/o block aparente, piso firme de concreto, acabados de fachada de material aparente, ventaneria de pared delgada de 1'', sin recubrimiento en baños y muebles tipo A Economicos",
+        "score": 53
+      },
+      {
+        "id": "SC011",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros tabique o block aparente, piso firme de concreto, acabados de fachadas material aparente, ventaneria de pared delgada 1'', con mosaicos 20x20 en baños y muebles tipo A",
+        "score": 59
+      },
+      {
+        "id": "SC012",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros aplanado yeso o concreto con pintura, piso cmosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm, acabados de fachadas aplanado de mezcla y/o pasta con pintura, ventaneria de pared gruesa 2'', con mosaicos de ceramica de hasta 30x30 cm y marmol de 10x30 cm en baños y muebles tipo B Mediana Calidad",
+        "score": 70
+      },
+      {
+        "id": "SC013",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz, piso mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado, acabados de fachadas tabique,block, madera y/o concreto acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas,  ventaneria de perfil aluminio anonizado de hasta 3'', canceles de piso a techo y cristal de hasta 6 mm,  con loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm en baños y muebles tipo C Buena Calidad",
+        "score": 93
+      },
+      {
+        "id": "SC014",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz plastificado, \n piso alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería, \n acabados de fachadas mezcla, pasta y/o placa de cantera, balcones y/o terrazas descubiertas, \n ventaneria de perfil aluminio anonizado de hasta 4'', canceles de piso a techo y cristal de hasta 9mm, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm en baños y \n muebles de baño tipo D Lujo",
+        "score": 115
+      },
+      {
+        "id": "SC015",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros papel tapiz de tela y/o cenefas de madera,\n piso alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada, \n acabados de fachadas laminas de aluminio esmaltado, fachada inegral de cristal, balcones y/o terrazas cubiertas, \n ventaneria cristal templado, filtrasol, polarizado, PVC de doble cristal termico y acustico, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cmen baños y \n muebles de baño tipo E Super lujo",
+        "score": 142
+      },
+      {
+        "id": "SC016",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos,\n piso alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm, \n acabados de fachadas de materiales de nueva generación (muros verdes, paneles de acero, aluminio), \n ventaneria laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato,\n con loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm en baños y \n muebles de baño tipo F Gran Lujo",
+        "score": 175
+      }
+    ],
+    "S04": [
+      {
+        "id": "SC017",
+        "description": "Estructura con muros de carga, hechos de tabicn o block, sin entrepisos, con losa de concreto, \nacabados en muros de tabique y/o block aparente, piso firme de concreto, acabados de fachada de material aparente, ventaneria de pared delgada de 1'', sin recubrimiento en baños y muebles tipo A Economicos",
+        "score": 58
+      },
+      {
+        "id": "SC018",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros tabique o block aparente, piso firme de concreto, acabados de fachadas material aparente, ventaneria de pared delgada 1'', con mosaicos 20x20 en baños y muebles tipo A",
+        "score": 66
+      },
+      {
+        "id": "SC019",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros aplanado yeso o concreto con pintura, piso cmosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm, acabados de fachadas aplanado de mezcla y/o pasta con pintura, ventaneria de pared gruesa 2'', con mosaicos de ceramica de hasta 30x30 cm y marmol de 10x30 cm en baños y muebles tipo B Mediana Calidad",
+        "score": 77
+      },
+      {
+        "id": "SC020",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz, piso mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado, acabados de fachadas tabique,block, madera y/o concreto acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas,  ventaneria de perfil aluminio anonizado de hasta 3'', canceles de piso a techo y cristal de hasta 6 mm,  con loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm en baños y muebles tipo C Buena Calidad",
+        "score": 100
+      },
+      {
+        "id": "SC021",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz plastificado, \n piso alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería, \n acabados de fachadas mezcla, pasta y/o placa de cantera, balcones y/o terrazas descubiertas, \n ventaneria de perfil aluminio anonizado de hasta 4'', canceles de piso a techo y cristal de hasta 9mm, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm en baños y \n muebles de baño tipo D Lujo",
+        "score": 122
+      },
+      {
+        "id": "SC022",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros papel tapiz de tela y/o cenefas de madera,\n piso alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada, \n acabados de fachadas laminas de aluminio esmaltado, fachada inegral de cristal, balcones y/o terrazas cubiertas, \n ventaneria cristal templado, filtrasol, polarizado, PVC de doble cristal termico y acustico, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cmen baños y \n muebles de baño tipo E Super lujo",
+        "score": 149
+      },
+      {
+        "id": "SC023",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos,\n piso alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm, \n acabados de fachadas de materiales de nueva generación (muros verdes, paneles de acero, aluminio), \n ventaneria laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato,\n con loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm en baños y \n muebles de baño tipo F Gran Lujo",
+        "score": 182
+      }
+    ],
+    "S05": [
+      {
+        "id": "SC024",
+        "description": "Estructura con muros de carga, hechos de tabicn o block, sin entrepisos, con losa de concreto, \nacabados en muros de tabique y/o block aparente, piso firme de concreto, acabados de fachada de material aparente, ventaneria de pared delgada de 1'', sin recubrimiento en baños y muebles tipo A Economicos",
+        "score": 65
+      },
+      {
+        "id": "SC025",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros tabique o block aparente, piso firme de concreto, acabados de fachadas material aparente, ventaneria de pared delgada 1'', con mosaicos 20x20 en baños y muebles tipo A",
+        "score": 74
+      },
+      {
+        "id": "SC026",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros aplanado yeso o concreto con pintura, piso cmosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm, acabados de fachadas aplanado de mezcla y/o pasta con pintura, ventaneria de pared gruesa 2'', con mosaicos de ceramica de hasta 30x30 cm y marmol de 10x30 cm en baños y muebles tipo B Mediana Calidad",
+        "score": 85
+      },
+      {
+        "id": "SC027",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz, piso mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado, acabados de fachadas tabique,block, madera y/o concreto acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas,  ventaneria de perfil aluminio anonizado de hasta 3'', canceles de piso a techo y cristal de hasta 6 mm,  con loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm en baños y muebles tipo C Buena Calidad",
+        "score": 108
+      },
+      {
+        "id": "SC028",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz plastificado, \n piso alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería, \n acabados de fachadas mezcla, pasta y/o placa de cantera, balcones y/o terrazas descubiertas, \n ventaneria de perfil aluminio anonizado de hasta 4'', canceles de piso a techo y cristal de hasta 9mm, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm en baños y \n muebles de baño tipo D Lujo",
+        "score": 130
+      },
+      {
+        "id": "SC029",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros papel tapiz de tela y/o cenefas de madera,\n piso alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada, \n acabados de fachadas laminas de aluminio esmaltado, fachada inegral de cristal, balcones y/o terrazas cubiertas, \n ventaneria cristal templado, filtrasol, polarizado, PVC de doble cristal termico y acustico, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cmen baños y \n muebles de baño tipo E Super lujo",
+        "score": 157
+      },
+      {
+        "id": "SC030",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos,\n piso alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm, \n acabados de fachadas de materiales de nueva generación (muros verdes, paneles de acero, aluminio), \n ventaneria laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato,\n con loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm en baños y \n muebles de baño tipo F Gran Lujo",
+        "score": 190
+      }
+    ],
+    "S06": [
+      {
+        "id": "SC031",
+        "description": "Estructura con muros de carga, hechos de tabicón o block, sin entrepisos, con losa de concreto, \nacabados en muros de tabique y/o block aparente, piso firme de concreto, acabados de fachada de material aparente, ventaneria de pared delgada de 1'', sin recubrimiento en baños y muebles tipo A Economicos",
+        "score": 67
+      },
+      {
+        "id": "SC032",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros tabique o block aparente, piso firme de concreto, acabados de fachadas material aparente, ventaneria de pared delgada 1'', con mosaicos 20x20 en baños y muebles tipo A",
+        "score": 77
+      },
+      {
+        "id": "SC033",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros aplanado yeso o concreto con pintura, piso cmosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm, acabados de fachadas aplanado de mezcla y/o pasta con pintura, ventaneria de pared gruesa 2'', con mosaicos de ceramica de hasta 30x30 cm y marmol de 10x30 cm en baños y muebles tipo B Mediana Calidad",
+        "score": 88
+      },
+      {
+        "id": "SC034",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz, piso mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado, acabados de fachadas tabique,block, madera y/o concreto acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas,  ventaneria de perfil aluminio anonizado de hasta 3'', canceles de piso a techo y cristal de hasta 6 mm,  con loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm en baños y muebles tipo C Buena Calidad",
+        "score": 111
+      },
+      {
+        "id": "SC035",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz plastificado, \n piso alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería, \n acabados de fachadas mezcla, pasta y/o placa de cantera, balcones y/o terrazas descubiertas, \n ventaneria de perfil aluminio anonizado de hasta 4'', canceles de piso a techo y cristal de hasta 9mm, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm en baños y \n muebles de baño tipo D Lujo",
+        "score": 133
+      },
+      {
+        "id": "SC036",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros papel tapiz de tela y/o cenefas de madera,\n piso alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada, \n acabados de fachadas laminas de aluminio esmaltado, fachada inegral de cristal, balcones y/o terrazas cubiertas, \n ventaneria cristal templado, filtrasol, polarizado, PVC de doble cristal termico y acustico, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cmen baños y \n muebles de baño tipo E Super lujo",
+        "score": 160
+      },
+      {
+        "id": "SC037",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos,\n piso alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm, \n acabados de fachadas de materiales de nueva generación (muros verdes, paneles de acero, aluminio), \n ventaneria laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato,\n con loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm en baños y \n muebles de baño tipo F Gran Lujo",
+        "score": 193
+      }
+    ],
+    "S07": [
+      {
+        "id": "SC038",
+        "description": "Estructura con muros de carga, hechos de tabicón o block, sin entrepisos, con losa de concreto, \nacabados en muros de tabique y/o block aparente, piso firme de concreto, acabados de fachada de material aparente, ventaneria de pared delgada de 1'', sin recubrimiento en baños y muebles tipo A Economicos",
+        "score": 73
+      },
+      {
+        "id": "SC039",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros tabique o block aparente, piso firme de concreto, acabados de fachadas material aparente, ventaneria de pared delgada 1'', con mosaicos 20x20 en baños y muebles tipo A",
+        "score": 84
+      },
+      {
+        "id": "SC040",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \ncon acabados en muros aplanado yeso o concreto con pintura, piso cmosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm, acabados de fachadas aplanado de mezcla y/o pasta con pintura, ventaneria de pared gruesa 2'', con mosaicos de ceramica de hasta 30x30 cm y marmol de 10x30 cm en baños y muebles tipo B Mediana Calidad",
+        "score": 95
+      },
+      {
+        "id": "SC041",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz, piso mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado, acabados de fachadas tabique,block, madera y/o concreto acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas,  ventaneria de perfil aluminio anonizado de hasta 3'', canceles de piso a techo y cristal de hasta 6 mm,  con loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm en baños y muebles tipo C Buena Calidad",
+        "score": 118
+      },
+      {
+        "id": "SC042",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pasta texturizada y/o papel tapiz plastificado, \n piso alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería, \n acabados de fachadas mezcla, pasta y/o placa de cantera, balcones y/o terrazas descubiertas, \n ventaneria de perfil aluminio anonizado de hasta 4'', canceles de piso a techo y cristal de hasta 9mm, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm en baños y \n muebles de baño tipo D Lujo",
+        "score": 140
+      },
+      {
+        "id": "SC043",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros papel tapiz de tela y/o cenefas de madera,\n piso alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada, \n acabados de fachadas laminas de aluminio esmaltado, fachada inegral de cristal, balcones y/o terrazas cubiertas, \n ventaneria cristal templado, filtrasol, polarizado, PVC de doble cristal termico y acustico, \n con loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cmen baños y \n muebles de baño tipo E Super lujo",
+        "score": 167
+      },
+      {
+        "id": "SC044",
+        "description": "Estructura con muros de carga, hechos de tabicon o block, con entrepisos, con losa de concreto, \n con acabados en muros pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos,\n piso alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm, \n acabados de fachadas de materiales de nueva generación (muros verdes, paneles de acero, aluminio), \n ventaneria laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato,\n con loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm en baños y \n muebles de baño tipo F Gran Lujo",
+        "score": 200
+      }
+    ]
+  }
+}
