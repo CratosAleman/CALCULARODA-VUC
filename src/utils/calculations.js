@@ -69,23 +69,3 @@ export function buildBreakdown(sections, selections) {
   return rows
 }
 
-export function buildClassification(levelRangeKey, classKey) {
-  if (!levelRangeKey || !classKey) return 'Sin clasificación'
-  return `H${levelRangeKey}${classKey}`
-}
-
-export function getVucValue(vucTable, levelRangeKey, classKey) {
-  if (!levelRangeKey || !classKey) return 0
-  return sanitizeNumber(vucTable?.[levelRangeKey]?.[classKey], 0)
-}
-
-export function getAvailableClassesByRange(vucTable, levelRangeKey) {
-  const classKeys = Object.keys(vucTable?.[levelRangeKey] ?? {})
-  return classKeys.sort((a, b) => sanitizeNumber(a, 0) - sanitizeNumber(b, 0))
-}
-
-export function getAvailableLevelRanges(vucTable) {
-  return Object.keys(vucTable ?? {}).sort(
-    (a, b) => sanitizeNumber(a, 0) - sanitizeNumber(b, 0),
-  )
-}

@@ -1,0 +1,2038 @@
+[
+  {
+    "matrizId": "ANEXO1_HABITACIONAL",
+    "anexo": "ANEXO 1_HABITACIONAL",
+    "titulo": "ANEXO1_HABITACIONAL",
+    "sheetName": "ANEXO1_MATRIZHABITACIONAL",
+    "sections": [
+      {
+        "key": "SEC01",
+        "label": "ESPACIOS",
+        "items": [
+          {
+            "id": "SUPERFICIE_DE_CONSTRUCCI",
+            "name": "SUPERFICIE DE CONSTRUCCIÓN",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "de 1 hasta 50 m2",
+                "score": 1
+              },
+              {
+                "id": "OP02",
+                "label": "Mayor de 50 hasta 85 m2",
+                "score": 1
+              },
+              {
+                "id": "OP03",
+                "label": "Mayor de 85 hasta 150 m2",
+                "score": 1
+              },
+              {
+                "id": "OP04",
+                "label": "Mayor de 150 hasta 250 m2",
+                "score": 2
+              },
+              {
+                "id": "OP05",
+                "label": "Mayor de 250 hasta 450 m2",
+                "score": 3
+              },
+              {
+                "id": "OP06",
+                "label": "Mayor de 450 hasta 650 m2",
+                "score": 3
+              },
+              {
+                "id": "OP07",
+                "label": "Mayor de 650 m2",
+                "score": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC02",
+        "label": "ESTRUCTURA",
+        "items": [
+          {
+            "id": "TIPO_DE_ESTRUCTURA",
+            "name": "TIPO DE ESTRUCTURA",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Muros de carga sin refuerzo horizontales y/o verticales para vivienda 1 y hasta 50 m2 de construcción",
+                "score": 7
+              },
+              {
+                "id": "OP02",
+                "label": "Muros de carga para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP03",
+                "label": "Muros de carga para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP04",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP05",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP06",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP07",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 650 m2 de construcción",
+                "score": 11
+              }
+            ]
+          },
+          {
+            "id": "MUROS",
+            "name": "MUROS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Lámina y/o madera y/o tabicón",
+                "score": 8
+              },
+              {
+                "id": "OP02",
+                "label": "Tabicón y/o block y/o tabique y/o sillar de adobe, para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 11
+              },
+              {
+                "id": "OP03",
+                "label": "Block y/o tabique y/o sillar de adobe, para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 18
+              },
+              {
+                "id": "OP04",
+                "label": "Block y/o tabique y/o sillar de adobe, para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 19
+              },
+              {
+                "id": "OP05",
+                "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 20
+              },
+              {
+                "id": "OP06",
+                "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 21
+              },
+              {
+                "id": "OP07",
+                "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda de más de 650 m2 de construcción",
+                "score": 22
+              }
+            ]
+          },
+          {
+            "id": "ENTREPISOS",
+            "name": "ENTREPISOS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin entrepisos",
+                "score": 1
+              },
+              {
+                "id": "OP02",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o de madera, para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 4
+              },
+              {
+                "id": "OP03",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o de madera para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 5
+              },
+              {
+                "id": "OP04",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 7
+              },
+              {
+                "id": "OP05",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP06",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP07",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 650 m2 de construcción",
+                "score": 10
+              }
+            ]
+          },
+          {
+            "id": "CUBIERTAS",
+            "name": "CUBIERTAS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Lámina de cartón asfáltico, asbesto o fibra de vidrio",
+                "score": 4
+              },
+              {
+                "id": "OP02",
+                "label": "Losa de concreto y/o losa aligerada, para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 5
+              },
+              {
+                "id": "OP03",
+                "label": "Losa de concreto y/o losa aligerada, para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 6
+              },
+              {
+                "id": "OP04",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP05",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 13
+              },
+              {
+                "id": "OP06",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 14
+              },
+              {
+                "id": "OP07",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 650 m2 de construcción",
+                "score": 16
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC03",
+        "label": "ACABADOS",
+        "items": [
+          {
+            "id": "ACABADOS_EN_MUROS_Y_PLAF",
+            "name": "ACABADOS EN MUROS Y PLAFONES",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "No hay o muy escasos",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Tabique y/o block aparente. Plafón: Aparente común",
+                "score": 4
+              },
+              {
+                "id": "OP03",
+                "label": "Anterior(es) y/o aplanado de yeso con pintura y/o aplanado de mezcla con pintura. Plafón: Aplanado de mezcla, cartón de yeso y/o pasta y/o tirol con pintura",
+                "score": 5
+              },
+              {
+                "id": "OP04",
+                "label": "Anterior(es) y/o pasta texturizada y/o papel tapiz. Plafón: corrido y/o plafón suspendido y/o modular de tablaroca y/o PVC",
+                "score": 6
+              },
+              {
+                "id": "OP05",
+                "label": "Anterior(es) y/o pasta texturizada con color integral y/o papel tapiz plastificado. Plafón: Anterior(es) y/o marquesinas y/o nubes de tablaroca y/o madera y/o fibra de vidrio.",
+                "score": 8
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o papel tapiz de tela y/o cenefas de madera. Plafón: con sistemas personalizados y/o iluminación integrada en tablaroca, cartón de yeso y/o fibra de vidrio",
+                "score": 9
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es), y/o pastas químicas con mezclas especiales y/o tapiz de tela importado, y/o estucos o frescos decorativos. Plafón: Anterior(es) y/o elementos geométricos curvos en materiales como metal y/o maderas finas",
+                "score": 12
+              }
+            ]
+          },
+          {
+            "id": "ACABADOS_EN_PISO",
+            "name": "ACABADOS EN PISO",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Piso de tierra y/o firme de mezcla",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Firme de concreto simple pulido y/o loseta vinílica y/o linóleum y/o alfombra",
+                "score": 2
+              },
+              {
+                "id": "OP03",
+                "label": "Anterior(es) y/o mosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm.",
+                "score": 4
+              },
+              {
+                "id": "OP04",
+                "label": "Anterior(es) y/o mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. concreto estampado",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Anterior(es) y/o alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada, duela de ingeniería",
+                "score": 6
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada",
+                "score": 7
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 cm. o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm.",
+                "score": 10
+              }
+            ]
+          },
+          {
+            "id": "ACABADOS_EN_FACHADAS",
+            "name": "ACABADOS EN FACHADAS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin acabados",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Material aparente común",
+                "score": 3
+              },
+              {
+                "id": "OP03",
+                "label": "Aplanado de mezcla y/o pasta con pintura.",
+                "score": 4
+              },
+              {
+                "id": "OP04",
+                "label": "Tabique, block, madera y/o concreto, acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o losas inclinadas.",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Aplanado de mezcla y/o pasta y/o placa de cantera y/o mármoles y/o losas inclinadas y/o piedrín y/o precolados de concreto, balcones y/o terrazas descubiertas",
+                "score": 7
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o láminas de aluminio esmaltado y/o fachada integral de cristal y/o balcones y/o terrazas cubiertas",
+                "score": 13
+              },
+              {
+                "id": "OP07",
+                "label": "Materiales de nueva generación (muros verdes, paneles de acero, aluminio)",
+                "score": 23
+              }
+            ]
+          },
+          {
+            "id": "VENTANER_A",
+            "name": "VENTANERÍA",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "De pedacería de madera de pino de segunda y/o fierro de segunda",
+                "score": 1
+              },
+              {
+                "id": "OP02",
+                "label": "Perfil de aluminio natural de 1\" y/o perfil de fierro estructural y/o tubular de pared delgada",
+                "score": 2
+              },
+              {
+                "id": "OP03",
+                "label": "Perfil de aluminio natural de hasta 2\" y/o perfil de fierro estructural y/o tubular de pared gruesa",
+                "score": 4
+              },
+              {
+                "id": "OP04",
+                "label": "Perfil de aluminio anodizado o esmaltado hasta de 3\" con canceles de piso a techo y cristal hasta de 6 mm",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Perfil de aluminio anodizado o esmaltado de hasta 4\" con canceles de piso a techo y cristal de hasta 9 mm",
+                "score": 10
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o cristal templado filtrasol y/o polarizado y/o cancelería de PVC de doble cristal térmico y acústico",
+                "score": 13
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) y/o inteligente laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato",
+                "score": 16
+              }
+            ]
+          },
+          {
+            "id": "RECUBRIMIENTOS_EN_BA_OS_",
+            "name": "RECUBRIMIENTOS EN BAÑOS Y COCINA",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin recubrimientos",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Mosaicos 20 x 20 cm. y/o azulejo de 11 x 11 cm. y/o loseta cerámica de hasta 20 x 20 cm. y/o esmalte",
+                "score": 2
+              },
+              {
+                "id": "OP03",
+                "label": "Anterior(es) y/o loseta cerámica de hasta 30 x 30 cm. y/o de mármol de 10 x 30 cm",
+                "score": 3
+              },
+              {
+                "id": "OP04",
+                "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm. Placa cerámica 3D de 60x60 cm.",
+                "score": 9
+              },
+              {
+                "id": "OP05",
+                "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm.",
+                "score": 12
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cm",
+                "score": 16
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm",
+                "score": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC04",
+        "label": "SERVICIOS",
+        "items": [
+          {
+            "id": "MUEBLES_DE_BA_O_CALIDAD",
+            "name": "MUEBLES DE BAÑO CALIDAD",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "W.C. de barro y/o letrina sin conexión de agua corriente.",
+                "score": 5
+              },
+              {
+                "id": "OP02",
+                "label": "Muebles tipo \"A\" Económica",
+                "score": 8
+              },
+              {
+                "id": "OP03",
+                "label": "Muebles tipo \"B\" Mediana Calidad",
+                "score": 12
+              },
+              {
+                "id": "OP04",
+                "label": "Muebles tipo \"C\" Buena Calidad",
+                "score": 25
+              },
+              {
+                "id": "OP05",
+                "label": "Muebles tipo \"D\" Lujo",
+                "score": 34
+              },
+              {
+                "id": "OP06",
+                "label": "Muebles tipo \"E\" Super Lujo",
+                "score": 46
+              },
+              {
+                "id": "OP07",
+                "label": "Muebles tipo \"F\" Gran Lujo",
+                "score": 56
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC05",
+        "label": "RANGO DE NIVEL",
+        "items": [
+          {
+            "id": "CLAVE",
+            "name": "CLAVE",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "01",
+                "score": 2
+              },
+              {
+                "id": "OP02",
+                "label": "10",
+                "score": 15
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "classRanges": [
+      {
+        "key": "1",
+        "min": 0,
+        "max": 38
+      },
+      {
+        "key": "4",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "key": "5",
+        "min": 4,
+        "max": 2
+      },
+      {
+        "key": "7",
+        "min": 8,
+        "max": 1
+      },
+      {
+        "key": "2",
+        "min": 39,
+        "max": 60
+      },
+      {
+        "key": "3",
+        "min": 61,
+        "max": 85
+      },
+      {
+        "key": "6",
+        "min": 146,
+        "max": 180
+      }
+    ]
+  },
+  {
+    "matrizId": "ANEXO2_ADAPTADA",
+    "anexo": "ANEXO 2_ADAPTADA",
+    "titulo": "ANEXO2_ADAPTADA",
+    "sheetName": "ANEXO2_MATRIZ_NOHABITACIONAL",
+    "sections": [
+      {
+        "key": "SEC01",
+        "label": "GENERAL",
+        "items": [
+          {
+            "id": "SUPERFICIE_DE_CONSTRUCCI",
+            "name": "SUPERFICIE DE CONSTRUCCIÓN",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "De 1 y hasta 50 m2",
+                "score": 1
+              },
+              {
+                "id": "OP02",
+                "label": "Mayor de 50 y hasta 85 m2",
+                "score": 1
+              },
+              {
+                "id": "OP03",
+                "label": "Mayor de 85 y hasta 150 m2",
+                "score": 1
+              },
+              {
+                "id": "OP04",
+                "label": "Mayor de 150 y hasta 250 m2",
+                "score": 2
+              },
+              {
+                "id": "OP05",
+                "label": "Mayor de 250 y hasta 450 m2",
+                "score": 3
+              },
+              {
+                "id": "OP06",
+                "label": "Mayor de 450 y hasta 650 m2",
+                "score": 3
+              },
+              {
+                "id": "OP07",
+                "label": "Mayor de 650 m2",
+                "score": 4
+              }
+            ]
+          },
+          {
+            "id": "TIPO_DE_ESTRUCTURA",
+            "name": "TIPO DE ESTRUCTURA",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Muros-sin refuerzo horizontales y/o verticales para vivienda de 1 y hasta 50 m2 de construcción",
+                "score": 7
+              },
+              {
+                "id": "OP02",
+                "label": "Muros de carga para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP03",
+                "label": "Muros de carga para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP04",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP05",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP06",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP07",
+                "label": "Muros de carga y/o columnas de concreto y/o de acero y/o mixtas para vivienda mayor de 650 m2 de construcción",
+                "score": 11
+              }
+            ]
+          },
+          {
+            "id": "MUROS",
+            "name": "MUROS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Lámina y/o madera y/o tabicón",
+                "score": 8
+              },
+              {
+                "id": "OP02",
+                "label": "Tabicón y/o block y/o tabique y/o sillar de adobe, para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 11
+              },
+              {
+                "id": "OP03",
+                "label": "Block y/o tabique y/o sillar de adobe para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 18
+              },
+              {
+                "id": "OP04",
+                "label": "Block y/o tabique y/o sillar de adobe para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 19
+              },
+              {
+                "id": "OP05",
+                "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 20
+              },
+              {
+                "id": "OP06",
+                "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 21
+              },
+              {
+                "id": "OP07",
+                "label": "Block y/o tabique y/o sillar de adobe y/o tablaroca para vivienda de más de 650 m2 de construcción.",
+                "score": 22
+              }
+            ]
+          },
+          {
+            "id": "ENTREPISOS",
+            "name": "ENTREPISOS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin entrepisos.",
+                "score": 1
+              },
+              {
+                "id": "OP02",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o de madera para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 4
+              },
+              {
+                "id": "OP03",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o de madera para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 5
+              },
+              {
+                "id": "OP04",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 7
+              },
+              {
+                "id": "OP05",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 8
+              },
+              {
+                "id": "OP06",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP07",
+                "label": "Con o sin losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 650 m2 de construcción",
+                "score": 10
+              }
+            ]
+          },
+          {
+            "id": "CUBIERTAS",
+            "name": "CUBIERTAS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Lámina de cartón asfáltico, asbesto o fibra de vidrio.",
+                "score": 4
+              },
+              {
+                "id": "OP02",
+                "label": "Losa de concreto y/o losa aligerada para vivienda mayor de 50 y hasta 85 m2 de construcción",
+                "score": 5
+              },
+              {
+                "id": "OP03",
+                "label": "Losa de concreto y/o losa aligerada para vivienda mayor de 85 y hasta 150 m2 de construcción",
+                "score": 6
+              },
+              {
+                "id": "OP04",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 150 y hasta 250 m2 de construcción",
+                "score": 9
+              },
+              {
+                "id": "OP05",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 250 y hasta 450 m2 de construcción",
+                "score": 13
+              },
+              {
+                "id": "OP06",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 450 y hasta 650 m2 de construcción",
+                "score": 14
+              },
+              {
+                "id": "OP07",
+                "label": "Losa de concreto y/o losa aligerada y/o losa reticular y/o de madera para vivienda mayor de 650 m2 de construcción",
+                "score": 16
+              }
+            ]
+          },
+          {
+            "id": "MUROS_Y_PLAFONES",
+            "name": "MUROS Y PLAFONES",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "No hay o muy escasos",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Tabique y/o block aparente acabado común. Plafón: Aparente común",
+                "score": 4
+              },
+              {
+                "id": "OP03",
+                "label": "Anterior(es) y/o aplanado de yeso con pintura y/o aplanado de mezcla con pintura. Plafón: Aplanado de mezcla, cartón de yeso y/o pasta y/o tirol con pintura.",
+                "score": 5
+              },
+              {
+                "id": "OP04",
+                "label": "Anterior(es) y/o pasta texturizada y/o papel tapiz. Plafón corrido y/o plafón suspendido y/o modular de tabla roca, y/o PVC, y/o acústico.",
+                "score": 6
+              },
+              {
+                "id": "OP05",
+                "label": "Anterior(es) y/o pasta texturizada con color integral y/o papel tapiz plastificado. Plafón: Anterior(es) y/o marquesinas y/o nubes de tabla roca y/o madera y/o fibra de vidrio",
+                "score": 8
+              },
+              {
+                "id": "OP06",
+                "label": "Anteriores y/o tapiz de tela y/o cenefas de madera. Plafones con sistemas personalizados, y/o iluminación integrada en tabla roca, cartón de yeso y/o fibra de vidrio.",
+                "score": 9
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) y/o pastas químicas con mezclas especiales y/o tapiz de tela importado y/o estucos o frescos decorativos. Plafón: Anterior (es) y/o elementos geométricos curvos en materiales como metal y/o maderas finas",
+                "score": 12
+              }
+            ]
+          },
+          {
+            "id": "PISOS",
+            "name": "PISOS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Piso de tierra y/o firme de mezcla",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Firme de concreto simple pulido y/o loseta vinílica y/o linóleum y/o alfombra.",
+                "score": 2
+              },
+              {
+                "id": "OP03",
+                "label": "Anterior(es) y/o mosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica de 20 x 20 cm. y/o duela de madera laminada y/o mármol de 10 x 30 cm.",
+                "score": 4
+              },
+              {
+                "id": "OP04",
+                "label": "Anterior(es) y/o mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o duela o parquet de madera y/o mármol de hasta 30 x 30 cm. Concreto estampado",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Anterior(es) y/o alfombra y/o loseta cerámica mayor de 30 x 30 cm. y/o mármol de 30 x 30 cm. y/o cantera laminada. Duela de ingeniería",
+                "score": 6
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) alfombra y/o loseta cerámica igual o mayor de 30 x 30 cm. y/o duela o parquet de maderas finas y/o mármol igual o mayor de 40 x 40 cm. y/o cantera laminada.",
+                "score": 7
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) alfombra y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o cantera laminada y/o loseta de porcelanato de 50 X 50 o mayores y/o duela o parquet de maderas sólidas de espesor mayor de 10 mm",
+                "score": 10
+              }
+            ]
+          },
+          {
+            "id": "FACHADAS",
+            "name": "FACHADAS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin acabados",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Material aparente común.",
+                "score": 3
+              },
+              {
+                "id": "OP03",
+                "label": "Aplanado de mezcla y/o pasta con pintura.",
+                "score": 4
+              },
+              {
+                "id": "OP04",
+                "label": "Tabique, block, madera y/o concreto, acabado aparente artesanal, pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o lozas inclinadas.",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Aplanado de mezcla y/o pasta y/o placa de cantera y/o mármoles y/o losas inclinadas y/o piedrín y/o precolados de concreto, balcones y/o terrazas descubiertas.",
+                "score": 7
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o láminas de aluminio esmaltado y/o fachada integral de cristal y/o balcones y/o terrazas cubiertas.",
+                "score": 13
+              },
+              {
+                "id": "OP07",
+                "label": "Materiales de nueva generación (muros verdes, paneles de acero, aluminio)",
+                "score": 23
+              }
+            ]
+          },
+          {
+            "id": "VENTANER_A",
+            "name": "VENTANERÍA",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "De pedacería de madera de pino de segunda y/o fierro de segunda",
+                "score": 1
+              },
+              {
+                "id": "OP02",
+                "label": "Perfil de aluminio natural de 1\" y/o perfil de fierro estructural y/o tubular de pared delgada.",
+                "score": 2
+              },
+              {
+                "id": "OP03",
+                "label": "Perfil de aluminio natural de hasta 2\" y/o perfil de fierro estructural y/o tubular de pared gruesa.",
+                "score": 4
+              },
+              {
+                "id": "OP04",
+                "label": "Perfil de aluminio anodizado o esmaltado hasta de 3\" con canceles de piso a techo y cristal hasta de 6 mm.",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Perfil de aluminio anodizado o esmaltado de hasta 4\" con canceles de piso a techo y cristal de hasta 9 mm.",
+                "score": 10
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o cristal templado filtrasol y/o polarizado y/o cancelerías de PVC de doble cristal térmico y acústico",
+                "score": 13
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) y/o inteligente laminado inastillable y/o cancelería de PVC de doble cristal térmico y acústico y/o terrazas techadas y/o un solárium o más de perfil de aluminio con cristales o policarbonato",
+                "score": 16
+              }
+            ]
+          },
+          {
+            "id": "RECUBRIMIENTOS_EN_BA_OS_",
+            "name": "RECUBRIMIENTOS EN BAÑOS Y COCINA",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin recubrimientos",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Mosaicos 20 x 20 cm. y/o azulejo de 11 x 11 cm. y/o loseta cerámica de hasta 20 x 20 cm. y/o esmalte",
+                "score": 2
+              },
+              {
+                "id": "OP03",
+                "label": "Anterior (es) y/o loseta cerámica de hasta 30 x 30 cm. y/o de mármol de 10 x 30 cm",
+                "score": 3
+              },
+              {
+                "id": "OP04",
+                "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol 30 x 30 cm., placa cerámica 3D de 60x60 cm.",
+                "score": 9
+              },
+              {
+                "id": "OP05",
+                "label": "Anterior(es) Loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores a 30 x 30 cm.",
+                "score": 12
+              },
+              {
+                "id": "OP06",
+                "label": "Anterior(es) y/o loseta cerámica mayor de 30 x 30 cm. y/o de mármol en placas mayores de 30 x 30 cm. y/o de granito en placas mayores a 30 x 30 cm.",
+                "score": 16
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) y/o loseta cerámica igual o mayor de 40 x 40 cm. y/o de mármol en placas mayores de 90 x 90 cm. y/o de granito en placas mayores a 90 x 90 cm.",
+                "score": 20
+              }
+            ]
+          },
+          {
+            "id": "MUEBLES_DE_BA_O",
+            "name": "MUEBLES DE BAÑO",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "W.C. de barro y/o letrina sin conexión de agua corriente",
+                "score": 5
+              },
+              {
+                "id": "OP02",
+                "label": "Muebles tipo \"A o G\" Económica",
+                "score": 8
+              },
+              {
+                "id": "OP03",
+                "label": "Muebles tipo \"B o H\" Mediana Calidad",
+                "score": 12
+              },
+              {
+                "id": "OP04",
+                "label": "Muebles tipo \"C o l\" Buena Calidad.",
+                "score": 25
+              },
+              {
+                "id": "OP05",
+                "label": "Muebles tipo \"D o J\" Lujo.",
+                "score": 34
+              },
+              {
+                "id": "OP06",
+                "label": "Muebles tipo \"E o K\" Super Lujo",
+                "score": 46
+              },
+              {
+                "id": "OP07",
+                "label": "Muebles tipo \"F o L\" Gran Lujo",
+                "score": 56
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "classRanges": [
+      {
+        "key": "4",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "key": "3",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "key": "2",
+        "min": 3,
+        "max": 2
+      },
+      {
+        "key": "5",
+        "min": 4,
+        "max": 2
+      },
+      {
+        "key": "6",
+        "min": 5,
+        "max": 4
+      },
+      {
+        "key": "1",
+        "min": 7,
+        "max": 8
+      },
+      {
+        "key": "7",
+        "min": 8,
+        "max": 1
+      }
+    ]
+  },
+  {
+    "matrizId": "ANEXO3_NO_HABITACIONAL",
+    "anexo": "ANEXO 3_NO_HABITACIONAL",
+    "titulo": "ANEXO3_NO_HABITACIONAL",
+    "sheetName": "ANEXO3_MATRIZ_NOHABITACIONAL",
+    "sections": [
+      {
+        "key": "SEC01",
+        "label": "ESTRUCTURA",
+        "items": [
+          {
+            "id": "MUROS",
+            "name": "MUROS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Muros sin refuerzo horizontales y /o verticales",
+                "score": 7
+              },
+              {
+                "id": "OP02",
+                "label": "De carga de 1 y hasta 2 niveles",
+                "score": 9
+              },
+              {
+                "id": "OP03",
+                "label": "De carga y/o marcos rígidos de concreto mayor de 2 y hasta 5 niveles",
+                "score": 10
+              },
+              {
+                "id": "OP04",
+                "label": "De carga y/o marcos rígidos de concreto y/o acero y/o mixtos mayores de 5 y hasta 10 niveles",
+                "score": 11
+              },
+              {
+                "id": "OP05",
+                "label": "De carga y/o marcos rígidos de concreto y/o acero y/o mixtos mayores de 10 y hasta 15 niveles",
+                "score": 12
+              },
+              {
+                "id": "OP06",
+                "label": "De carga y/o marcos rígidos de concreto y/o acero y/o mixtos mayores de 15 y hasta 25 niveles",
+                "score": 13
+              },
+              {
+                "id": "OP07",
+                "label": "De carga y/o marcos rígidos de concreto y/o acero y/o mixtos mayores de 25 niveles",
+                "score": 15
+              }
+            ]
+          },
+          {
+            "id": "ALTURA_DE_ENTREPISOS",
+            "name": "ALTURA DE ENTREPISOS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Hasta 2.00 m sin entrepisos",
+                "score": 15
+              },
+              {
+                "id": "OP02",
+                "label": "Mayor de 2.00 m. y hasta 2.10 m. con o sin entrepiso de losa de concreto y/o losa aligerada y/o de madera.",
+                "score": 20
+              },
+              {
+                "id": "OP03",
+                "label": "Mayor de 2.10 m .y hasta 2.20 m. con o sin entrepiso de losa de concreto y/o losa aligerada y/o de madera",
+                "score": 21
+              },
+              {
+                "id": "OP04",
+                "label": "Mayor de 2.20 m y hasta 2.30 m. con o sin entrepiso de losa de concreto y/o losa aligerada y/o de madera",
+                "score": 22
+              },
+              {
+                "id": "OP05",
+                "label": "Mayor de 2.30 m. y hasta 2.50 m. con o sin entrepiso de losa de concreto y/o losa aligerada y/o de madera",
+                "score": 23
+              },
+              {
+                "id": "OP06",
+                "label": "Mayor de 2.50 m. y hasta 3.00 m. con o sin entrepiso de losa de concreto y/o losaaligerada y/o de madera",
+                "score": 28
+              },
+              {
+                "id": "OP07",
+                "label": "Mayores de 3.00 m. con o sin entrepiso de losa de concreto y/o losa aligerada y/o de madera",
+                "score": 37
+              }
+            ]
+          },
+          {
+            "id": "CUBIERTAS",
+            "name": "CUBIERTAS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Lámina y/o madera",
+                "score": 6
+              },
+              {
+                "id": "OP02",
+                "label": "Losa de concreto y/o losa aligerada y/o madera y/o metálica ligera y/o láminas con altura al punto más alto de hasta 5.00 m",
+                "score": 9
+              },
+              {
+                "id": "OP03",
+                "label": "Losa de concreto y/o losa aligerada y/o láminas con altura al punto más alto mayor de 5.00 y hasta 10.00 m",
+                "score": 11
+              },
+              {
+                "id": "OP04",
+                "label": "Losa de concreto y/o losa aligerada y/o láminas con altura al punto más alto mayor de 10.00 y hasta 20.00 m",
+                "score": 13
+              },
+              {
+                "id": "OP05",
+                "label": "Losa de concreto y/o losa aligerada y/o láminas con altura al punto más alto mayor de 20.00 y hasta 30.00 m",
+                "score": 14
+              },
+              {
+                "id": "OP06",
+                "label": "Losa de concreto y/o losa aligerada y/o láminas con altura al punto más alto mayor de 30.00 m y hasta 50.00 m",
+                "score": 15
+              },
+              {
+                "id": "OP07",
+                "label": "Losa de concreto y/o losa aligerada y/o láminas. Altura al punto más alto mayor de 50.00 m. Tridilosa.",
+                "score": 19
+              }
+            ]
+          },
+          {
+            "id": "CLAROS",
+            "name": "CLAROS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Con claro en su sentido más largo que libra la estructura de hasta 5.00 m",
+                "score": 6
+              },
+              {
+                "id": "OP02",
+                "label": "Con claro en su sentido más largo que libra la estructura mayor de 5.00 y hasta 10.00 m",
+                "score": 11
+              },
+              {
+                "id": "OP03",
+                "label": "Con claro en su sentido más largo que libra la estructura mayor de 10.00 m y hasta 15.00 m.",
+                "score": 12
+              },
+              {
+                "id": "OP04",
+                "label": "Con claro que libra la estructura mayor de 15.00 m y hasta 20.00 m",
+                "score": 14
+              },
+              {
+                "id": "OP05",
+                "label": "Con claro en su sentido más largo que libra la estructura mayor de 20.00 m y hasta 25.00 m",
+                "score": 15
+              },
+              {
+                "id": "OP06",
+                "label": "Con claro en su sentido más largo que libra la estructura mayor de 25.00 m y hasta 30.00 m",
+                "score": 20
+              },
+              {
+                "id": "OP07",
+                "label": "Con claro en su sentido más largo que libra la estructura mayor de 30.00 m",
+                "score": 27
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC02",
+        "label": "ACABADOS",
+        "items": [
+          {
+            "id": "MUROS_Y_PLAFONES",
+            "name": "MUROS Y PLAFONES",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin acabados",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Tabique y/o block aparente acabado común. Plafón: Aparente común",
+                "score": 4
+              },
+              {
+                "id": "OP03",
+                "label": "Anterior (es) y/o aplanado de yeso con pintura y/o aplanado de mezcla con pintura. Plafón aplanado de mezcla, cartón de yeso y/o pasta y/o tirol con pintura.",
+                "score": 8
+              },
+              {
+                "id": "OP04",
+                "label": "Anteriores y /o pasta texturizada y/o papel tapiz y/o lambrines de madera de pino y/o acabado aparente artesanal. Plafón corrido y/o plafón suspendido y/o modular de tablaroca y/o PVC, y/o acústico.",
+                "score": 10
+              },
+              {
+                "id": "OP05",
+                "label": "Pasta texturizada con color integral y/o papel tapiz plastificado y/o lambrines de madera de encino o caoba. Plafón: Anterior (es) y/o marquesinas y/o nubes de tablaroca y/o madera y/o fibra de vidrio.",
+                "score": 29
+              },
+              {
+                "id": "OP06",
+                "label": "Tapiz de tela y/o lambrines de maderas finas y/o recubrimientos tipo estuco. Plafones con sistemas personalizados y/o iluminación integrada en tablaroca, cartón de yeso y/o fibra de vidrio.",
+                "score": 33
+              },
+              {
+                "id": "OP07",
+                "label": "Tapiz de tela y/o lambrines de maderas finas y/o recubrimientos tipo estuco, frescos decorativos y/o pastas sintéticas especializadas o de diseño y/o muros de cristal templado de 8 mm. Plafón: Anterior(es) y/o elementos geométricos curvos en materiales como metal y/o maderas finas.",
+                "score": 34
+              }
+            ]
+          },
+          {
+            "id": "PISOS",
+            "name": "PISOS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Firme de tierra o de pedacería de loseta de cerámica",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Firme de concreto simple pulido y/o loseta vinílica y/o alfombra de uso rudo y/o loseta de cerámica de 20 x 20 cm. o de segunda",
+                "score": 6
+              },
+              {
+                "id": "OP03",
+                "label": "Mosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica hasta 20 x 20 cm. y/o duela de madera laminada. y/o mármol hasta 10 x 30 cm.",
+                "score": 8
+              },
+              {
+                "id": "OP04",
+                "label": "Mosaico terrazo en placas o colado en sitio y/o alfombra y/o duela o parquet de madera y/o mármol hasta 30 x 30 cm.",
+                "score": 9
+              },
+              {
+                "id": "OP05",
+                "label": "Alfombra y/o loseta cerámica hasta 30 x 30 cm. y/o mármol hasta 40 x 40 cm. y/o cantera laminada",
+                "score": 19
+              },
+              {
+                "id": "OP06",
+                "label": "Alfombra y/o loseta cerámica hasta 40 x 40 cm. y/o duela o parquet de maderas finas y/o placas de granito hasta 50 x 50 cm. y/o loseta de porcelanato hasta 40 x 40 cm. Vinil especializado y/o pintura epóxica. ASÉPTICO",
+                "score": 37
+              },
+              {
+                "id": "OP07",
+                "label": "Alfombra y/o loseta cerámica mayor de 40 x 40 cm. y/o mármol mayor de 40 x 40 cm. y/o placas de granito mayores de 90 x 90 cm. y/o loseta de porcelanato mayor de 40 x 40 cm. Piso epóxico. ASÉPTICO. Cristal Templado",
+                "score": 45
+              }
+            ]
+          },
+          {
+            "id": "FACHADAS",
+            "name": "FACHADAS",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin acabados",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Material aparente acabado común.",
+                "score": 5
+              },
+              {
+                "id": "OP03",
+                "label": "Aplanado de mezcla y/o pasta con pintura.",
+                "score": 6
+              },
+              {
+                "id": "OP04",
+                "label": "Tabique, block, madera y/o concreto acabado aparente artesanal. Pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o fachada integral de cristal",
+                "score": 7
+              },
+              {
+                "id": "OP05",
+                "label": "Fachada integral de cristal templado polarizado y/o precolados de concreto.",
+                "score": 11
+              },
+              {
+                "id": "OP06",
+                "label": "Placa de cantera labrada y/o mármoles o granitos y/o láminas de aluminio esmaltado",
+                "score": 15
+              },
+              {
+                "id": "OP07",
+                "label": "Fachada integral de cristal templado inteligente laminado, inastillable y/o cancelería de PVC de doble cristal térmico y acústico. Materiales de nueva generación (muros verdes, paneles de acero, aluminio).",
+                "score": 19
+              }
+            ]
+          },
+          {
+            "id": "RECUBRIMIENTOS_EN_BA_OS_",
+            "name": "RECUBRIMIENTOS EN BAÑOS Y COCINA",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Sin recubrimientos",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Mosaicos 20 x 20 cm. y/o esmalte.",
+                "score": 1
+              },
+              {
+                "id": "OP03",
+                "label": "Azulejo de 11 x 11 cm. y/o loseta cerámica hasta 20 x 20 cm.",
+                "score": 2
+              },
+              {
+                "id": "OP04",
+                "label": "Loseta cerámica hasta 30 x 30 cm. y/o mármol hasta 10x 30 cm.",
+                "score": 3
+              },
+              {
+                "id": "OP05",
+                "label": "Loseta cerámica hasta 40 x 40 cm. y/o mármol en placas hasta 30 x 30 cm.",
+                "score": 5
+              },
+              {
+                "id": "OP06",
+                "label": "Loseta cerámica mayor de 40 x 40 cm. y/o mármol en placas hasta 40 x 40 cm. y/o granito en placas hasta 50 x 50 cm. Recubrimientos asépticos",
+                "score": 8
+              },
+              {
+                "id": "OP07",
+                "label": "Mármol en placas mayor a 40 x 40 cm. y/o de granito en placas mayor a 50 x 50 cm.",
+                "score": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC03",
+        "label": "SERVICIOS",
+        "items": [
+          {
+            "id": "MUEBLES_DE_BA_O",
+            "name": "MUEBLES DE BAÑO",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "W.C. de barro y/o letrina sin conexión de agua corriente.",
+                "score": 2
+              },
+              {
+                "id": "OP02",
+                "label": "Muebles tipo \"G\"",
+                "score": 3
+              },
+              {
+                "id": "OP03",
+                "label": "Muebles tipo \"H\"",
+                "score": 5
+              },
+              {
+                "id": "OP04",
+                "label": "Muebles tipo \"I\"",
+                "score": 11
+              },
+              {
+                "id": "OP05",
+                "label": "Muebles tipo \"J\"",
+                "score": 14
+              },
+              {
+                "id": "OP06",
+                "label": "Muebles tipo \"K\"",
+                "score": 19
+              },
+              {
+                "id": "OP07",
+                "label": "Muebles tipo \"L\"",
+                "score": 20
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "classRanges": [
+      {
+        "key": "1",
+        "min": 0,
+        "max": 49
+      },
+      {
+        "key": "5",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "key": "6",
+        "min": 6,
+        "max": 0
+      },
+      {
+        "key": "4",
+        "min": 6,
+        "max": 5
+      },
+      {
+        "key": "7",
+        "min": 15,
+        "max": 6
+      },
+      {
+        "key": "2",
+        "min": 50,
+        "max": 76
+      },
+      {
+        "key": "3",
+        "min": 77,
+        "max": 92
+      }
+    ]
+  },
+  {
+    "matrizId": "ANEXO4_INDUSTRIA_ABASTO_CULTURA",
+    "anexo": "ANEXO 4_INDUSTRIA_ABASTO_CULTURA",
+    "titulo": "ANEXO4_INDUSTRIA_ABASTO_CULTURA",
+    "sheetName": "ANEXO4_MATRIZ_NOHABITACIONAL",
+    "sections": [
+      {
+        "key": "SEC01",
+        "label": "MUROS Y CLAROS CORTOS",
+        "items": [
+          {
+            "id": "COLUMNAS_Y_ESTRUCTURAS_M",
+            "name": "Columnas y estructuras metálicas ligeras.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 4
+              },
+              {
+                "id": "OP02",
+                "label": "Muros de carga y/o marcos rígidos de concreto y/o acero y/o mixta.",
+                "score": 10
+              },
+              {
+                "id": "OP03",
+                "label": "Muros de carga y/o marcos rígidos de concreto y/o acero y/o mixta.",
+                "score": 24
+              },
+              {
+                "id": "OP04",
+                "label": "Muros de carga y/o marcos rígidos de concreto y/o acero y/o mixta.",
+                "score": 34
+              },
+              {
+                "id": "OP05",
+                "label": "Muros de carga y/o marcos rígidos de concreto y/o acero y/o mixta.",
+                "score": 46
+              },
+              {
+                "id": "OP06",
+                "label": "Muros de carga y/o marcos rígidos de concreto y/o acero y/o mixta.",
+                "score": 49
+              },
+              {
+                "id": "OP07",
+                "label": "Muros de carga y/o marcos rígidos de concreto y/o acero y/o mixta.",
+                "score": 51
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC02",
+        "label": "CUBIERTAS Y CLAROS",
+        "items": [
+          {
+            "id": "L_MINA",
+            "name": "Lámina.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 2
+              },
+              {
+                "id": "OP02",
+                "label": "Metálica ligera y lámina.",
+                "score": 7
+              },
+              {
+                "id": "OP03",
+                "label": "Metálica ligera y lámina y/o concreto.",
+                "score": 15
+              },
+              {
+                "id": "OP04",
+                "label": "Metálica ligera y lámina y/o concreto.",
+                "score": 20
+              },
+              {
+                "id": "OP05",
+                "label": "Metálica ligera y lámina o prefabricada y/o concreto.",
+                "score": 24
+              },
+              {
+                "id": "OP06",
+                "label": "Metálica ligera y lámina pretensada y/o concreto. Tridilosa.",
+                "score": 26
+              },
+              {
+                "id": "OP07",
+                "label": "Metálica ligera y lámina o pretensada y/o concreto. Tridilosa.",
+                "score": 28
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC03",
+        "label": "ALTURA",
+        "items": [
+          {
+            "id": "AL_PUNTO_M_S_ALTO_HASTA_",
+            "name": "Al punto más alto hasta 2.50 m.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 2
+              },
+              {
+                "id": "OP02",
+                "label": "Al punto más alto mayor de 2.50 m y hasta 3.50 m.",
+                "score": 6
+              },
+              {
+                "id": "OP03",
+                "label": "Al punto más alto mayor de 3.50 m y hasta 5.00 m.",
+                "score": 14
+              },
+              {
+                "id": "OP04",
+                "label": "Al punto más alto mayor de 5.00 m y hasta 6.00 m.",
+                "score": 21
+              },
+              {
+                "id": "OP05",
+                "label": "Al punto más alto mayor de 6.00 m y hasta 8.00 m.",
+                "score": 28
+              },
+              {
+                "id": "OP06",
+                "label": "Al punto más alto mayor de 8.00 m y hasta 10.00 m.",
+                "score": 29
+              },
+              {
+                "id": "OP07",
+                "label": "Al punto más alto mayor de 10.00 m.",
+                "score": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC04",
+        "label": "MUROS Y PLAFONES",
+        "items": [
+          {
+            "id": "SIN_ACABADOS",
+            "name": "Sin acabados.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Tabique y/o block aparente común.",
+                "score": 1
+              },
+              {
+                "id": "OP03",
+                "label": "Aplanado de mezcla con pintura y/o aplanado de yeso con pintura.",
+                "score": 2
+              },
+              {
+                "id": "OP04",
+                "label": "Aplanado de yeso con pasta texturizada. Plafón corrido y/o plafón suspendido y/o modular de tablaroca y/o PVC, y/o acústico",
+                "score": 4
+              },
+              {
+                "id": "OP05",
+                "label": "Pasta texturizada con color integral y/o lambrines de madera de pino y/o tapiz de tela. Plafón corrido y/o plafón suspendido y/o modular de tablaroca y/o PVC y/o acústico.",
+                "score": 10
+              },
+              {
+                "id": "OP06",
+                "label": "Lambrines de madera de encino o caoba y/o tapiz de tela acolchada. Plafones con sistemas personalizados y/o iluminación integrada en tablaroca, cartón de yeso y/o fibra de vidrio.",
+                "score": 14
+              },
+              {
+                "id": "OP07",
+                "label": "Anterior(es) y/o recubrimientos sintéticos especiales. Cristal templado. Plafón anterior(es) y/o elementos geométricos, curvos en materiales como metal y/o maderas finas.",
+                "score": 27
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC05",
+        "label": "PISOS",
+        "items": [
+          {
+            "id": "FIRME_DE_CONCRETO_SIMPLE",
+            "name": "Firme de concreto simple.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 2
+              },
+              {
+                "id": "OP02",
+                "label": "Firme de concreto reforzado escobillado.",
+                "score": 5
+              },
+              {
+                "id": "OP03",
+                "label": "Firme de concreto reforzado pulido y/o mosaico de pasta y/o mosaico terrazo y/o alfombra y/o loseta cerámica hasta 20 x 20 cm y/o duela de madera laminada y/o mármol hasta 10 x 30 cm.",
+                "score": 16
+              },
+              {
+                "id": "OP04",
+                "label": "Firme de concreto tratado y/o mosaico terrazo en placas o colado en sitio y/o alfombra y/o loseta cerámica hasta 30 x 30 cm y/o duela de parquet de madera y/o mármol hasta 30 x 30 cm. Cristal templado",
+                "score": 16
+              },
+              {
+                "id": "OP05",
+                "label": "Alfombra y/o loseta cerámica hasta 40 x 40 cm y/o mármol hasta 40 x 40 cm y/o cantera laminada. Cristal templado.",
+                "score": 17
+              },
+              {
+                "id": "OP06",
+                "label": "Alfombra y/o loseta cerámica hasta 50 x 50 cm y/o duela o parquet de maderas finas y/o mármol hasta 50 x 50 cm y/o placas de granito iguales o mayores de 50 x 50 cm. Cristal templado.",
+                "score": 18
+              },
+              {
+                "id": "OP07",
+                "label": "Alfombra y/o loseta cerámica mayor de 50 x 50 cm y/o mármol mayor de 50 x 50 cm y/o placas de granito iguales o mayores 90 x 90 cm. Cristal templado.",
+                "score": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC06",
+        "label": "FACHADAS",
+        "items": [
+          {
+            "id": "SIN_ACABADOS_8",
+            "name": "Sin acabados.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Material aparente común.",
+                "score": 1
+              },
+              {
+                "id": "OP03",
+                "label": "Aplanado de mezcla.",
+                "score": 5
+              },
+              {
+                "id": "OP04",
+                "label": "Aplanado de mezcla y pasta.",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o fachada integral de cristal templado polarizado y/o precolados de concreto.",
+                "score": 9
+              },
+              {
+                "id": "OP06",
+                "label": "Placa de cantera labrada y/o mármoles o granitos y/o láminas de aluminio esmaltado y/o fachada integral.",
+                "score": 10
+              },
+              {
+                "id": "OP07",
+                "label": "Placa de cantera labrada y/o mármoles o granitos y/o láminas de aluminio esmaltado y/o fachada integral de cristal templado inteligente laminado inastillable y/o cancelería de PVC de doble cristal térmico y/o acústico.",
+                "score": 11
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "classRanges": [
+      {
+        "key": "2",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "key": "6",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "key": "1",
+        "min": 5,
+        "max": 1
+      },
+      {
+        "key": "7",
+        "min": 6,
+        "max": 1
+      },
+      {
+        "key": "4",
+        "min": 16,
+        "max": 5
+      },
+      {
+        "key": "3",
+        "min": 51,
+        "max": 85
+      },
+      {
+        "key": "5",
+        "min": 118,
+        "max": 140
+      }
+    ]
+  },
+  {
+    "matrizId": "ANEXO5_DEPORTES",
+    "anexo": "ANEXO 5_DEPORTES",
+    "titulo": "ANEXO5_DEPORTES",
+    "sheetName": "ANEXO5_MATRIZ_NOHABITACIONAL",
+    "sections": [
+      {
+        "key": "SEC01",
+        "label": "TIPO DE ESTRUCTURA Y CUBIERTAS Y CLAROS O VOLADOS",
+        "items": [
+          {
+            "id": "COLUMNAS_Y_VIGAS_MET_LIC",
+            "name": "Columnas y vigas metálicas ligeras con cubierta de lámina (sin muros).",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 8
+              },
+              {
+                "id": "OP02",
+                "label": "Muros de carga y/o marcos rígidos de concreto y/o acero y/o mixtos con o sin graderías.",
+                "score": 23
+              },
+              {
+                "id": "OP03",
+                "label": "Marcos rígidos de concreto y/o acero y/o mixtos con o sin graderías.",
+                "score": 53
+              },
+              {
+                "id": "OP04",
+                "label": "Marcos rígidos de concreto y/o acero y/o mixtos con o sin graderías.",
+                "score": 75
+              },
+              {
+                "id": "OP05",
+                "label": "Marcos rígidos de concreto y/o acero y/o mixtos formando o conteniendo graderías.",
+                "score": 97
+              },
+              {
+                "id": "OP06",
+                "label": "Marcos rígidos de concreto y/o acero y/o mixtos formando o conteniendo graderías.",
+                "score": 102
+              },
+              {
+                "id": "OP07",
+                "label": "Marcos rígidos de concreto y/o acero y/o mixtos formando o conteniendo graderías.",
+                "score": 106
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC02",
+        "label": "MUROS Y PLAFONES",
+        "items": [
+          {
+            "id": "NO_EXISTEN_O_SIN_ACABADO",
+            "name": "No existen o sin acabados.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Tabique y/o block aparente acabado común. Plafón: Aparente común.",
+                "score": 1
+              },
+              {
+                "id": "OP03",
+                "label": "Plafón: Aplanado de mezcla, cartón de yeso y/o pasta y/o tirol con pintura.",
+                "score": 2
+              },
+              {
+                "id": "OP04",
+                "label": "Pasta texturizada, acabado aparente artesanal. Plafón corrido y/o plafón suspendido y/o modular de tablaroca y/o PVC y/o acústico.",
+                "score": 4
+              },
+              {
+                "id": "OP05",
+                "label": "Plafón: Anterior(es) y/o marquesinas y/o nubes de tablaroca y/o madera y/o fibra de vidrio.",
+                "score": 10
+              },
+              {
+                "id": "OP06",
+                "label": "Lambrines de madera de encino o caoba y/o tapiz de tela acolchada. Plafones con sistemas personalizados y/o iluminación integrada en tablaroca, cartón de yeso y/o fibra de vidrio.",
+                "score": 14
+              },
+              {
+                "id": "OP07",
+                "label": "Más recubrimientos sintéticos especiales. Plafón: Anterior(es) y/o elementos geométricos curvos en materiales como metal y/o maderas finas.",
+                "score": 17
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC03",
+        "label": "PISOS Y RECUBRIMIENTOS EN BAÑOS",
+        "items": [
+          {
+            "id": "FIRME_DE_CONCRETO_SIMPLE",
+            "name": "Firme de concreto simple. Sin recubrimiento en baños.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 2
+              },
+              {
+                "id": "OP02",
+                "label": "Firme de concreto reforzado escobillado. Aplanado de mezcla en muros para baños.",
+                "score": 5
+              },
+              {
+                "id": "OP03",
+                "label": "Firme de concreto reforzado pulido y/o con pintura de esmalte o epóxica en canchas deportivas. Recubrimientos en baños: Azulejos de 11 x 11 cm y/o loseta cerámica hasta 20 x 20 cm.",
+                "score": 12
+              },
+              {
+                "id": "OP04",
+                "label": "Anteriores y/o duela de madera de encino o similar. Recubrimiento en baños: Loseta cerámica hasta 30 x 30 cm y/o mármol hasta 10 x 30 cm y/o mosaico veneciano de 2 x 2 cm en placas de 34 x 30 cm.",
+                "score": 16
+              },
+              {
+                "id": "OP05",
+                "label": "Anteriores y/o duela de madera con sistemas especializados de amortiguación y/o pasto artificial. Recubrimientos: Loseta cerámica hasta 40 x 40 cm y/o mármol en placas hasta 30 x 30 cm.",
+                "score": 17
+              },
+              {
+                "id": "OP06",
+                "label": "Anteriores y/o recubrimientos sintéticos especializados. Recubrimientos en baños: Loseta cerámica mayor de 40 x 40 cm y/o mármol en placas hasta 40 x 40cm y/o granito en placas hasta 50 x 50 cm.",
+                "score": 18
+              },
+              {
+                "id": "OP07",
+                "label": "Anteriores y/o elementos desmontables especializados para el funcionamiento deportivo (pistas de hielo). Recubrimientos en baños: Mármol en placas mayor a 40 x 40 cm y/o de granito en placas mayor de 50 x 50 cm porcelanatos de 50 x 50 cm o más.",
+                "score": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "SEC04",
+        "label": "FACHADAS",
+        "items": [
+          {
+            "id": "NO_EXISTEN_O_SIN_ACABADO_6",
+            "name": "No existen o sin acabados.",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "Opción 1",
+                "score": 0
+              },
+              {
+                "id": "OP02",
+                "label": "Material aparente acabados común.",
+                "score": 1
+              },
+              {
+                "id": "OP03",
+                "label": "Aplanado de mezcla.",
+                "score": 2
+              },
+              {
+                "id": "OP04",
+                "label": "Aplanado de pasta.",
+                "score": 5
+              },
+              {
+                "id": "OP05",
+                "label": "Pasta con aplicaciones de cantera y/o mármol y/o cerámica y/o fachada integral de cristal. Tabique, block, madera y/o concreto, acabado aparente artesanal.",
+                "score": 9
+              },
+              {
+                "id": "OP06",
+                "label": "Elementos precolados de concreto y/o láminas de aluminio esmaltado.",
+                "score": 10
+              },
+              {
+                "id": "OP07",
+                "label": "Placas de mármoles o granitos. Materiales de nueva generación (muros verdes, paneles de acero, aluminio).",
+                "score": 11
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "classRanges": [
+      {
+        "key": "1",
+        "min": 5,
+        "max": 1
+      },
+      {
+        "key": "2",
+        "min": 12,
+        "max": 2
+      },
+      {
+        "key": "4",
+        "min": 16,
+        "max": 5
+      },
+      {
+        "key": "3",
+        "min": 36,
+        "max": 70
+      },
+      {
+        "key": "5",
+        "min": 118,
+        "max": 139
+      },
+      {
+        "key": "6",
+        "min": 140,
+        "max": 149
+      },
+      {
+        "key": "7",
+        "min": 150,
+        "max": 999999
+      }
+    ]
+  }
+]

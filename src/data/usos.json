@@ -1,0 +1,107 @@
+[
+  {
+    "usoClave": "A",
+    "usoNombre": "ABASTO",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO4_INDUSTRIA_ABASTO_CULTURA"
+    ],
+    "matrizDefault": "ANEXO4_INDUSTRIA_ABASTO_CULTURA"
+  },
+  {
+    "usoClave": "C",
+    "usoNombre": "COMERCIO",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO2_ADAPTADA",
+      "ANEXO3_NO_HABITACIONAL"
+    ],
+    "matrizDefault": "ANEXO2_ADAPTADA"
+  },
+  {
+    "usoClave": "D",
+    "usoNombre": "DEPORTE",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO5_DEPORTES"
+    ],
+    "matrizDefault": "ANEXO5_DEPORTES"
+  },
+  {
+    "usoClave": "E",
+    "usoNombre": "EDUCACIÓN",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO2_ADAPTADA",
+      "ANEXO3_NO_HABITACIONAL"
+    ],
+    "matrizDefault": "ANEXO2_ADAPTADA"
+  },
+  {
+    "usoClave": "H",
+    "usoNombre": "HABITACIONAL",
+    "grupo": "HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO1_HABITACIONAL"
+    ],
+    "matrizDefault": "ANEXO1_HABITACIONAL"
+  },
+  {
+    "usoClave": "I",
+    "usoNombre": "INDUSTRIA",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO4_INDUSTRIA_ABASTO_CULTURA"
+    ],
+    "matrizDefault": "ANEXO4_INDUSTRIA_ABASTO_CULTURA"
+  },
+  {
+    "usoClave": "K",
+    "usoNombre": "COMUNICACIONES",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO2_ADAPTADA",
+      "ANEXO3_NO_HABITACIONAL"
+    ],
+    "matrizDefault": "ANEXO2_ADAPTADA"
+  },
+  {
+    "usoClave": "L",
+    "usoNombre": "HOTEL",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO2_ADAPTADA",
+      "ANEXO3_NO_HABITACIONAL"
+    ],
+    "matrizDefault": "ANEXO2_ADAPTADA"
+  },
+  {
+    "usoClave": "O",
+    "usoNombre": "OFICINA",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO2_ADAPTADA",
+      "ANEXO3_NO_HABITACIONAL"
+    ],
+    "matrizDefault": "ANEXO2_ADAPTADA"
+  },
+  {
+    "usoClave": "Q",
+    "usoNombre": "CULTURA",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO4_INDUSTRIA_ABASTO_CULTURA"
+    ],
+    "matrizDefault": "ANEXO4_INDUSTRIA_ABASTO_CULTURA"
+  },
+  {
+    "usoClave": "S",
+    "usoNombre": "SALUD",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO2_ADAPTADA",
+      "ANEXO3_NO_HABITACIONAL"
+    ],
+    "matrizDefault": "ANEXO2_ADAPTADA"
+  }
+]
