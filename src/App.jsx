@@ -237,9 +237,14 @@ function App() {
   }
 
   const baseDataReady = (usos?.length ?? 0) > 0 && (matrices?.length ?? 0) > 0 && (vucCatalogo?.length ?? 0) > 0
-  const lookupClasificacion = buildClasificacion(lookupUso, lookupRango, lookupClase)
   const usoNombreCalc = calcResolution.uso?.usoNombre ?? calculatorUso
   const usoNombreLookup = lookupResolution.uso?.usoNombre ?? lookupUso
+
+  const lookupRangoDisplay = useMemo(() => {
+    const r = lookupRangos.find((x) => x.rangoClave === lookupRango)
+    if (!r) return lookupRango || '—'
+    return `${r.rangoClave} — ${r.rangoNombre}`
+  }, [lookupRangos, lookupRango])
 
   return (
     <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 md:px-6 md:py-8">
@@ -402,12 +407,13 @@ function App() {
             </div>
           </div>
 
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-6 space-y-3">
             <StatCard label="Uso seleccionado" value={usoNombreLookup} />
-            <StatCard label="Matriz seleccionada" value={lookupResolution.matrizId || 'Sin matriz'} />
-            <StatCard label="Clase seleccionada" value={lookupClase || 'Sin clase'} />
-            <StatCard label="Clasificación" value={lookupClasificacion} />
-            <StatCard label="VUC encontrado" value={lookupRow ? formatCurrency(sanitizeNumber(lookupRow.valorM2, 0)) : 'No existe VUC para esa combinación'} />
+            <StatCard label="Rango" value={lookupRangoDisplay} />
+            <StatCard
+              label="VUC encontrado"
+              value={lookupRow ? formatCurrency(sanitizeNumber(lookupRow.valorM2, 0)) : 'No existe VUC para esa combinación'}
+            />
           </div>
         </section>
       ) : null}
