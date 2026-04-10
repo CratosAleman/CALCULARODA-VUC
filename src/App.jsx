@@ -13,6 +13,7 @@ import { useLocalStorageState } from './hooks/useLocalStorageState'
 import { buildBreakdown, getLevelRangeKey, getSurfaceRangeByArea, sanitizeNumber } from './utils/calculations'
 import { cloneData, withoutRangoNivelClaveSection } from './utils/dataTransforms'
 import { formatCurrency, formatNumber } from './utils/formatters'
+import { lookupRangoPinColor, lookupUsoPinColor, lookupVucPinColor } from './utils/lookupUiTheme'
 import {
   buscarVuc,
   buildClasificacion,
@@ -407,13 +408,17 @@ function App() {
             </div>
           </div>
 
-          <div className="mt-6 space-y-3">
-            <StatCard label="Uso seleccionado" value={usoNombreLookup} />
-            <StatCard label="Rango" value={lookupRangoDisplay} />
-            <StatCard
-              label="VUC encontrado"
-              value={lookupRow ? formatCurrency(sanitizeNumber(lookupRow.valorM2, 0)) : 'No existe VUC para esa combinación'}
-            />
+          <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/90 p-4 shadow-inner">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Resumen</p>
+            <div className="space-y-3">
+              <StatCard label="Uso seleccionado" value={usoNombreLookup} pinColor={lookupUsoPinColor(lookupUso)} />
+              <StatCard label="Rango" value={lookupRangoDisplay} pinColor={lookupRangoPinColor(lookupRango)} />
+              <StatCard
+                label="VUC encontrado"
+                value={lookupRow ? formatCurrency(sanitizeNumber(lookupRow.valorM2, 0)) : 'No existe VUC para esa combinación'}
+                pinColor={lookupVucPinColor(!!lookupRow)}
+              />
+            </div>
           </div>
         </section>
       ) : null}
