@@ -11,7 +11,7 @@ import matricesDefault from './data/matrices_puntos.json'
 import vucCatalogoDefault from './data/vuc_catalogo.json'
 import { useLocalStorageState } from './hooks/useLocalStorageState'
 import { buildBreakdown, getLevelRangeKey, getSurfaceRangeByArea, sanitizeNumber } from './utils/calculations'
-import { cloneData, getRenderableMatrixSections } from './utils/dataTransforms'
+import { cloneData, withoutRangoNivelClaveSection } from './utils/dataTransforms'
 import { formatCurrency, formatNumber } from './utils/formatters'
 import {
   buscarVuc,
@@ -66,10 +66,11 @@ function App() {
     () => obtenerMatriz(matrices, calcResolution.matrizId),
     [matrices, calcResolution.matrizId],
   )
-  const renderableMatrixSections = useMemo(
-    () => getRenderableMatrixSections(currentMatrix?.sections ?? []),
+  const matrixForUi = useMemo(
+    () => withoutRangoNivelClaveSection(currentMatrix),
     [currentMatrix],
   )
+  const renderableMatrixSections = useMemo(() => matrixForUi?.sections ?? [], [matrixForUi])
 
   const currentSelections = useMemo(
     () => selectionsByMatriz[calcResolution.matrizId] ?? {},
@@ -84,22 +85,22 @@ function App() {
   }, [calcResolution, calculatorMatriz, setCalculatorMatriz])
 
   useEffect(() => {
-    if (!calcResolution.matrizId || !currentMatrix) return
+    if (!calcResolution.matrizId || !matrixForUi) return
     const hasCurrent = Boolean(selectionsByMatriz[calcResolution.matrizId])
     if (hasCurrent) return
     setSelectionsByMatriz((prev) => ({
       ...prev,
-      [calcResolution.matrizId]: crearSeleccionesDefault(currentMatrix),
+      [calcResolution.matrizId]: crearSeleccionesDefault(matrixForUi),
     }))
-  }, [calcResolution.matrizId, currentMatrix, selectionsByMatriz, setSelectionsByMatriz])
+  }, [calcResolution.matrizId, matrixForUi, selectionsByMatriz, setSelectionsByMatriz])
 
   const totalPoints = useMemo(
-    () => calcularPuntajeTotal(currentMatrix, currentSelections),
-    [currentMatrix, currentSelections],
+    () => calcularPuntajeTotal(matrixForUi, currentSelections),
+    [matrixForUi, currentSelections],
   )
   const classResult = useMemo(
-    () => resolverClase(currentMatrix, totalPoints),
-    [currentMatrix, totalPoints],
+    () => resolverClase(matrixForUi, totalPoints),
+    [matrixForUi, totalPoints],
   )
   const effectiveClase = classResult?.key ?? ''
 
@@ -348,7 +349,7 @@ function App() {
       {activeTab === 'scores' ? (
         <section className="mx-auto mt-6 max-w-5xl">
           <div className="mb-3 rounded-xl bg-slate-100 px-3 py-2 text-sm text-slate-700">Editando puntajes de: {calcResolution.matrizId || 'Sin matriz'}</div>
-          <ScoreEditor sections={currentMatrix?.sections ?? []} onScoreChange={handleScoreChange} />
+          <ScoreEditor sections={matrixForUi?.sections ?? []} onScoreChange={handleScoreChange} />
         </section>
       ) : null}
 

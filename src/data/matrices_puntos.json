@@ -479,28 +479,6 @@
             ]
           }
         ]
-      },
-      {
-        "key": "SEC05",
-        "label": "RANGO DE NIVEL",
-        "items": [
-          {
-            "id": "CLAVE",
-            "name": "CLAVE",
-            "options": [
-              {
-                "id": "OP01",
-                "label": "01",
-                "score": 2
-              },
-              {
-                "id": "OP02",
-                "label": "10",
-                "score": 15
-              }
-            ]
-          }
-        ]
       }
     ],
     "classRanges": [
@@ -2031,6 +2009,38 @@
       {
         "key": "7",
         "min": 150,
+        "max": 999999
+      }
+    ]
+  },
+  {
+    "matrizId": "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS",
+    "anexo": "ANEXO 6 CONSTRUCCIONES DESCUBIERTAS",
+    "titulo": "NO HABITACIONAL — CONSTRUCCIONES DESCUBIERTAS",
+    "sheetName": null,
+    "sections": [
+      {
+        "key": "SEC01",
+        "label": "GENERAL",
+        "items": [
+          {
+            "id": "CLASIFICACION_UNICA",
+            "name": "Clasificación",
+            "options": [
+              {
+                "id": "OP01",
+                "label": "ÚNICA",
+                "score": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "classRanges": [
+      {
+        "key": "1",
+        "min": 0,
         "max": 999999
       }
     ]

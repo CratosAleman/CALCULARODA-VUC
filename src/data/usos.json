@@ -56,6 +56,15 @@
     "matrizDefault": "ANEXO4_INDUSTRIA_ABASTO_CULTURA"
   },
   {
+    "usoClave": "J",
+    "usoNombre": "JARDÍN",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
+    ],
+    "matrizDefault": "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
+  },
+  {
     "usoClave": "K",
     "usoNombre": "COMUNICACIONES",
     "grupo": "NO HABITACIONAL",
@@ -84,6 +93,33 @@
       "ANEXO3_NO_HABITACIONAL"
     ],
     "matrizDefault": "ANEXO2_ADAPTADA"
+  },
+  {
+    "usoClave": "P",
+    "usoNombre": "PANTEÓN",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
+    ],
+    "matrizDefault": "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
+  },
+  {
+    "usoClave": "PC",
+    "usoNombre": "CANCHA DEPORTIVA",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
+    ],
+    "matrizDefault": "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
+  },
+  {
+    "usoClave": "PE",
+    "usoNombre": "ESTACIONAMIENTO",
+    "grupo": "NO HABITACIONAL",
+    "matricesPermitidas": [
+      "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
+    ],
+    "matrizDefault": "ANEXO6_CONSTRUCCIONES_DESCUBIERTAS"
   },
   {
     "usoClave": "Q",

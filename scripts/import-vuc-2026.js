@@ -25,6 +25,9 @@ const ANEXO_SHEET_MAP = {
   ANEXO5_DEPORTES: 'ANEXO5_MATRIZ_NOHABITACIONAL',
 }
 
+/** No viene de hoja Excel de matrices; valores según tabla oficial construcciones descubiertas */
+const MATRIZ_CONSTRUCCIONES_DESCUBIERTAS = 'ANEXO6_CONSTRUCCIONES_DESCUBIERTAS'
+
 const USO_TO_MATRICES = {
   H: ['ANEXO1_HABITACIONAL'],
   O: ['ANEXO2_ADAPTADA', 'ANEXO3_NO_HABITACIONAL'],
@@ -37,6 +40,105 @@ const USO_TO_MATRICES = {
   A: ['ANEXO4_INDUSTRIA_ABASTO_CULTURA'],
   Q: ['ANEXO4_INDUSTRIA_ABASTO_CULTURA'],
   D: ['ANEXO5_DEPORTES'],
+  PE: [MATRIZ_CONSTRUCCIONES_DESCUBIERTAS],
+  PC: [MATRIZ_CONSTRUCCIONES_DESCUBIERTAS],
+  J: [MATRIZ_CONSTRUCCIONES_DESCUBIERTAS],
+  P: [MATRIZ_CONSTRUCCIONES_DESCUBIERTAS],
+}
+
+const DESCUBIERTAS_USOS_META = {
+  PE: 'ESTACIONAMIENTO',
+  PC: 'CANCHA DEPORTIVA',
+  J: 'JARDÍN',
+  P: 'PANTEÓN',
+}
+
+/** [usoClave, rangoClave, rangoNombre, valorM2, incrementoMismaClaseRango | null] */
+const DESCUBIERTAS_FILAS = [
+  ['PE', '01', '0 0', 482.71, null],
+  ['PE', '02', '1 A 2', 492.38, 0.02],
+  ['PE', '05', '3 A 5', 516.97, 0.05],
+  ['PE', '10', '6 A 10', 542.84, 0.05],
+  ['PE', '15', '11 A 15', 569.97, 0.05],
+  ['PE', '20', '16 A 20', 598.46, 0.05],
+  ['PE', '99', '21 Ó MÁS', 628.4, 0.05],
+  ['PC', '01', '0 0', 240.19, null],
+  ['PC', '02', '1 A 2', 244.98, 0.02],
+  ['PC', '05', '3 A 5', 257.24, 0.05],
+  ['PC', '10', '6 A 10', 270.11, 0.05],
+  ['PC', '15', '11 A 15', 283.59, 0.05],
+  ['PC', '20', '16 A 20', 297.81, 0.05],
+  ['PC', '99', '21 Ó MÁS', 312.65, 0.05],
+  ['J', '01', '0 0', 300.23, null],
+  ['J', '02', '1 A 2', 306.23, 0.02],
+  ['J', '05', '3 A 5', 321.54, 0.05],
+  ['J', '10', '6 A 10', 337.63, 0.05],
+  ['J', '15', '11 A 15', 354.51, 0.05],
+  ['J', '20', '16 A 20', 372.24, 0.05],
+  ['J', '99', '21 Ó MÁS', 390.86, 0.05],
+  ['P', '01', '0 0', 300.23, null],
+]
+
+function buildDescubiertasCatalogRows() {
+  const grupo = 'NO HABITACIONAL'
+  const matrizId = MATRIZ_CONSTRUCCIONES_DESCUBIERTAS
+  return DESCUBIERTAS_FILAS.map(([usoClave, rangoClave, rangoNombre, valorM2, inc]) => {
+    const rc = normalizeRangoClave(rangoClave)
+    const clase = 1
+    const incVal = inc !== null && inc !== undefined ? inc : null
+    return {
+      matrizId,
+      grupo,
+      usoClave,
+      usoNombre: DESCUBIERTAS_USOS_META[usoClave],
+      rangoClave: rc,
+      rangoNombre,
+      clase,
+      valorM2,
+      incrementoEntreClases: null,
+      incrementoMismaClaseFormula: incVal,
+      incrementoMismaClaseValores: incVal,
+      clasificacion: buildClasificacion(usoClave, rc, clase),
+    }
+  })
+}
+
+function buildDescubiertasMatrix() {
+  return {
+    matrizId: MATRIZ_CONSTRUCCIONES_DESCUBIERTAS,
+    anexo: 'ANEXO 6 CONSTRUCCIONES DESCUBIERTAS',
+    titulo: 'NO HABITACIONAL — CONSTRUCCIONES DESCUBIERTAS',
+    sheetName: null,
+    sections: [
+      {
+        key: 'SEC01',
+        label: 'GENERAL',
+        items: [
+          {
+            id: 'CLASIFICACION_UNICA',
+            name: 'Clasificación',
+            options: [{ id: 'OP01', label: 'ÚNICA', score: 0 }],
+          },
+        ],
+      },
+    ],
+    classRanges: [{ key: '1', min: 0, max: 999999 }],
+  }
+}
+
+function mergeDescubiertasUsos(usosFromExcel) {
+  const map = new Map((usosFromExcel ?? []).map((u) => [u.usoClave, u]))
+  for (const [clave, nombre] of Object.entries(DESCUBIERTAS_USOS_META)) {
+    if (map.has(clave)) continue
+    map.set(clave, {
+      usoClave: clave,
+      usoNombre: nombre,
+      grupo: 'NO HABITACIONAL',
+      matricesPermitidas: [MATRIZ_CONSTRUCCIONES_DESCUBIERTAS],
+      matrizDefault: MATRIZ_CONSTRUCCIONES_DESCUBIERTAS,
+    })
+  }
+  return [...map.values()].sort((a, b) => a.usoClave.localeCompare(b.usoClave))
 }
 
 function normCell(value) {
@@ -234,11 +336,17 @@ function extractMatrixFromSheet(rows, matrizId, sheetName) {
   const headerRow = rows[headerIdx] ?? []
   const sectionRow = rows[headerIdx - 1] ?? []
 
-  const fieldColumns = []
+  let fieldColumns = []
   for (let c = 0; c < headerRow.length; c += 1) {
     const txt = normCell(headerRow[c])
     if (isUsefulHeaderText(txt)) fieldColumns.push(c)
   }
+
+  const sectionByColPre = inferSectionLabels(sectionRow, fieldColumns)
+  // No es rubro de la matriz de puntos: es la clave de rango de nivel (se deriva de "Número de niveles" en la app).
+  fieldColumns = fieldColumns.filter(
+    (col) => normalizeText(sectionByColPre[col]) !== 'RANGO DE NIVEL',
+  )
 
   const sectionByCol = inferSectionLabels(sectionRow, fieldColumns)
   const sectionMap = new Map()
@@ -368,8 +476,9 @@ function main() {
   }
   const vucRowsRaw = xlsx.utils.sheet_to_json(vucSheet, { header: 1, defval: null, raw: true })
   const vucBaseRows = processVucRows(vucRowsRaw)
-  const usos = buildUsos(vucBaseRows)
-  const vucCatalogo = buildCatalogo(vucBaseRows)
+  const descCatalogo = buildDescubiertasCatalogRows()
+  const usos = mergeDescubiertasUsos(buildUsos(vucBaseRows))
+  const vucCatalogo = [...buildCatalogo(vucBaseRows), ...descCatalogo]
 
   const matrices = []
   for (const [matrizId, sheetName] of Object.entries(ANEXO_SHEET_MAP)) {
@@ -378,17 +487,27 @@ function main() {
     const rows = xlsx.utils.sheet_to_json(sheet, { header: 1, defval: null, raw: true })
     matrices.push(extractMatrixFromSheet(rows, matrizId, sheetName))
   }
+  matrices.push(buildDescubiertasMatrix())
+
+  const vucCompatRows = [
+    ...vucBaseRows,
+    ...descCatalogo.map((row) => {
+      const copy = { ...row }
+      delete copy.matrizId
+      return copy
+    }),
+  ]
 
   fs.mkdirSync(OUT_DIR, { recursive: true })
   fs.writeFileSync(OUTPUT_USOS, `${JSON.stringify(usos, null, 2)}\n`, 'utf8')
   fs.writeFileSync(OUTPUT_MATRICES, `${JSON.stringify(matrices, null, 2)}\n`, 'utf8')
   fs.writeFileSync(OUTPUT_CATALOGO, `${JSON.stringify(vucCatalogo, null, 2)}\n`, 'utf8')
-  fs.writeFileSync(OUTPUT_COMPAT, `${JSON.stringify(vucBaseRows, null, 2)}\n`, 'utf8')
+  fs.writeFileSync(OUTPUT_COMPAT, `${JSON.stringify(vucCompatRows, null, 2)}\n`, 'utf8')
 
   console.log(`Escrito: ${OUTPUT_USOS} (${usos.length} usos)`)
   console.log(`Escrito: ${OUTPUT_MATRICES} (${matrices.length} matrices)`)
   console.log(`Escrito: ${OUTPUT_CATALOGO} (${vucCatalogo.length} filas)`)
-  console.log(`Escrito: ${OUTPUT_COMPAT} (${vucBaseRows.length} filas)`)
+  console.log(`Escrito: ${OUTPUT_COMPAT} (${vucCompatRows.length} filas)`)
 }
 
 main()
