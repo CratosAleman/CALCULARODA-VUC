@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import BreakdownPanel from './components/BreakdownPanel'
 import CategorySelector from './components/CategorySelector'
+import ConsultaVUS from './components/ConsultaVUS'
 import ScoreEditor from './components/ScoreEditor'
 import StatCard from './components/StatCard'
 import TabButton from './components/TabButton'
@@ -31,6 +32,7 @@ const TABS = [
   { key: 'scores', label: 'Editar puntajes' },
   { key: 'vuc', label: 'Administración de VUC' },
   { key: 'lookup', label: 'Consulta VUC' },
+  { key: 'vus', label: 'Consulta VUS' },
 ]
 
 function App() {
@@ -422,6 +424,8 @@ function App() {
           </div>
         </section>
       ) : null}
+
+      {activeTab === 'vus' ? <ConsultaVUS /> : null}
     </main>
   )
 }
