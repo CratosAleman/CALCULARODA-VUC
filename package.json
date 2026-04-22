@@ -8,9 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "import:vuc": "node scripts/import-vuc-2026.js",
-    "import:vus": "node scripts/convertir_manzanas_txt_a_json.js && node scripts/convertir_vus_txt_a_json.js",
-    "import:vus:manzanas": "node scripts/convertir_manzanas_txt_a_json.js",
-    "import:vus:catalogo": "node scripts/convertir_vus_txt_a_json.js",
+    "generar:vus": "node scripts/convertir_vus_desde_root.js",
+    "import:vus": "node scripts/convertir_vus_desde_root.js",
     "test:vus": "node scripts/test-vus-engine.mjs",
     "preview": "vite preview"
   },

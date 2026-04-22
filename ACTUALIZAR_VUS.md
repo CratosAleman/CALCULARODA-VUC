@@ -1,54 +1,41 @@
 # Actualizar datos VUS (Valor unitario de suelo)
 
-Los catálogos de la pestaña **Consulta VUS** se generan a partir de archivos de texto delimitados por `|` y se guardan como JSON en `src/data/`.
+Los catálogos de la pestaña **Consulta VUS** se generan leyendo los TXT oficiales **en la raíz del proyecto** (mismo directorio que `package.json`) y escribiendo JSON en `src/data/`.
 
-## Archivos fuente
+## Archivos fuente (en la raíz)
 
-1. **Manzanas** (nombre esperado): `AV_MNZ_2026_391_591_connombres.txt`  
-   Columnas: `anio`, `avalor`, `reg`, `man`, `action` (la primera línea puede ser encabezado con esos nombres).
+1. `AV_MNZ_2026_391_591_connombres.txt`  
+   Columnas: `anio|avalor|reg|man|action` (primera fila = encabezado).
 
-2. **Valores VUS** (nombre esperado): `AV_VUS_2026_391_591_connombre.txt`  
-   Columnas: `ANIO`, `AVALOR`, `ALCALDIA`, `VALOR`, `ADD` (encabezado opcional).
+2. `AV_VUS_2026_391_591_connombre.txt`  
+   Columnas: `ANIO|AVALOR|ALCALDIA|VALOR|ADD` (primera fila = encabezado).
 
-Coloca los TXT en `scripts/vus-fuentes/` **o** indica la ruta completa como argumento al script.
+El script usa `path.resolve(process.cwd(), ...)`; ejecuta **siempre** `npm run generar:vus` desde la raíz del repositorio.
 
-## Regenerar JSON cada año
+## Regenerar JSON
 
-1. Sustituye los TXT por la versión del nuevo año (ajusta también los nombres de archivo en los comandos si cambian).
-
-2. Desde la raíz del proyecto ejecuta:
+Con los TXT ya colocados en la raíz:
 
 ```bash
-npm run import:vus:manzanas
-npm run import:vus:catalogo
+npm run generar:vus
 ```
 
-O ambos en un solo paso:
+(Sigue disponible el alias `npm run import:vus` y hace lo mismo.)
 
-```bash
-npm run import:vus
-```
-
-3. Esto sobrescribe:
+Se sobrescriben:
 
 - `src/data/vus_manzanas_2026.json`
 - `src/data/vus_catalogo_2026.json`
 
-4. Si cambias el año en los nombres de archivo, actualiza las rutas por defecto dentro de:
+Lógica del conversor: `scripts/convertir_vus_desde_root.js`.
 
-- `scripts/convertir_manzanas_txt_a_json.js`
-- `scripts/convertir_vus_txt_a_json.js`
+Si el año o los nombres de archivo cambian, ajusta las constantes `ENTRADA_MNZ` y `ENTRADA_VUS` en ese script, y el nombre de salida de los JSON si aplica.
 
-y, si aplica, renombra los JSON y actualiza los `import` en `src/components/ConsultaVUS.jsx`.
+## Normalización (en script + motor `vusEngine.js`)
 
-5. Haz commit de los JSON regenerados y despliega (por ejemplo push a `main` si usas Vercel conectado a Git).
-
-## Normalización aplicada
-
-- Región y manzana: 3 dígitos (`037`, `002`).
-- Alcaldía: 2 dígitos (`01`).
-- AVALOR: mayúsculas, sin espacios.
-- VALOR: número (se aceptan comas como separador decimal miles según el contenido del TXT; el script usa `Number.parseFloat` tras quitar comas).
+- Región: 3 dígitos, manzana: 3 dígitos, alcaldía: 2 dígitos.
+- AVALOR: mayúsculas, sin espacios superfluos.
+- VALOR: número en punto flotante (comas de miles se eliminan antes de parsear).
 
 ## Pruebas del motor
 
@@ -58,5 +45,5 @@ npm run test:vus
 
 ## Motor y UI
 
-- Lógica: `src/utils/vusEngine.js` (índices por `reg-man` y por `avalor`).
-- Vista: `src/components/ConsultaVUS.jsx`.
+- Lógica: `src/utils/vusEngine.js`
+- Vista: `src/components/ConsultaVUS.jsx` (importa los JSON generados)
